@@ -76,7 +76,7 @@ require (
 	go.mills.io/webmention v0.0.0-20230423111544-baccd6f1042b
 	go.sour.is/passwd v0.2.0
 	go.yarn.social/client v0.0.0-20250420114029-410ad71a453e
-	go.yarn.social/lextwt v0.1.9
+	go.yarn.social/lextwt v0.1.10
 	go.yarn.social/types v0.0.0-20250421063104-18007f2aace2
 	golang.org/x/crypto v0.37.0
 	golang.org/x/net v0.39.0
