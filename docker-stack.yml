@@ -1,0 +1,27 @@
+---
+version: "3.8"
+
+services:
+  yarnd:
+    image: prologic/yarnd:latest
+    command: yarnd -d /data -s bitcask:///data/yarn.db
+    ports:
+      - "8000:8000/tcp"
+    environment:
+      - BASE_URL=http://127.0.0.1:8000
+      - OPEN_PROFILES=true
+      - OPEN_REGISTRATIONS=true
+      - API_SIGNING_KEY=supersecretchangeme
+      - COOKIE_SECRET=supersecretchangeme
+      - MAGICLINK_SECRET=supersecretchangeme
+    volumes:
+      - twtxt:/data
+    healthcheck:
+      test: wget -nv -t1 --spider 'http://localhost:8000' || exit 1
+      interval: 10s
+      retries: 5
+      start_period: 10s
+      timeout: 10s
+
+volumes:
+  twtxt:

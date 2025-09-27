@@ -1,0 +1,13 @@
+{{ define "content" }}
+  <article>
+    <hgroup>
+      <h2>{{ tr . "ImportTitle" }}</h2>
+      <em>{{ tr . "ImportSummary" }}</em>
+    </hgroup>
+    <form action="/import" method="POST">
+      <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+      <textarea id="feeds" name="feeds" placeholder='{{ tr . "ImportTip" }}' rows=24 autofocus required></textarea>
+      <button type="submit" class="primary">Import</button>
+    </form>
+  </article>
+{{ end }}

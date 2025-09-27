@@ -1,0 +1,19 @@
+{{ define "content" }}
+  <article>
+    <hgroup>
+      <h2>{{ tr . "SupportTitle" }}</h2>
+      <em>{{ tr . "SupportSummary" }}</em>
+    </hgroup>
+    <form action="/support" method="POST">
+      <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+      <input type="text" name="name" placeholder="{{ tr . "SupportFormName" }}" aria-label="{{ tr . "SupportFormName" }}" autofocus required>
+      <input type="email" name="email" placeholder="{{ tr . "SupportFormEmail" }}" aria-label="{{ tr . "SupportFormEmail" }}" required>
+      <input type="text" name="subject" placeholder="{{ tr . "SupportFormSubject" }}" aria-label="{{ tr . "SupportFormSubject" }}" required>
+      <textarea name="message" placeholder="{{ tr . "SupportFormMessage" }}" aria-label="{{ tr . "SupportFormMessage" }}" rows="5" cols="50" required></textarea>
+      <small>{{ tr . "SupportCaptchaSummary" }}</small>
+      <img id="captcha" src="/_captcha" alt="captcha" height="50" width="150" />
+      <input type="text" name="captchaInput" class="captchaInput" placeholder="{{ tr . "SupportFormCaptcha" }}" aria-label="{{ tr . "SupportFormCaptcha" }}" required>
+      <button type="submit">{{ tr . "SupportFormSubmit" }}</button>
+    </form>
+  </article>
+{{ end }}

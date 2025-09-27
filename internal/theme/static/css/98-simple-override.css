@@ -1,0 +1,205 @@
+/*
+* {
+  border: thin solid pink;
+}*/
+
+
+body,
+html {
+  overflow-x: hidden;
+  margin: 0 auto;
+  /*  position:relative;*/
+}
+
+
+body {
+  display: block;
+  /*  position:relative;*/
+}
+
+
+#podNavigation .ti,
+/* TODO change html to just be: nav .ti */
+nav .ti {
+  color: var(--icon);
+}
+
+header.container,
+main,
+footer {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/*:root {
+  --font-size: 16px;
+}*/
+
+p {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 0.1rem;
+  border-radius: 0.3rem;
+  -webkit-border-radius: 0.3rem;
+  -moz-border-radius: 0.3rem;
+}
+
+a:active,
+a:focus {
+  background-color: transparent;
+}
+
+
+/* == Detail / Summary / Arrow == */
+/* from: https://codeutility.org/html-how-to-position-detail-marker-to-come-after-summary-stack-overflow/ */
+/* shapes:  https://www.w3schools.com/charsets/ref_utf_geometric.asp */
+
+details>summary {
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary::after {
+  /*font-family: "tabler-icons";*/
+  font-family: serif;
+  /*content: "\ec42";*/
+  float: right;
+  /*padding-right: 1.5rem;*/
+  color: var(--text-light);
+  content: '►';
+}
+
+details[open] summary:after {
+  content: "▼";
+}
+
+
+
+dialog article {
+  margin: 0 0 0 -2rem;
+  padding: 1rem;
+}
+
+pre>code {
+  padding: 0;
+}
+
+
+pre,
+code,
+kbd {
+  margin: 0.25rem 0;
+  padding: 0.2rem 0.3rem;
+  background-color: var(--accent-bg);
+  border-radius: var(--border-radius);
+}
+
+audio,
+video {
+  display: block;
+}
+
+dialog article>footer {
+  margin-top: 1rem;
+  padding: 0;
+}
+
+dialog article>footer p {
+  padding: 0.5rem 1.5rem 2.5rem 1.5rem;
+  text-align: left;
+}
+
+
+label,
+fieldset legend {
+  font-weight: bold;
+}
+
+/* labels within a fieldset*/
+fieldset label {
+  font-weight: normal;
+}
+
+a[role=button] {
+  display: flex;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  margin: 0;
+}
+
+button {
+  /*display: block;*/
+  width: 100%;
+  margin: 0;
+}
+
+button,
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+label[type="button"] {
+  color: var(--text-btn);
+}
+
+input,
+select,
+textarea {
+  background-color: var(--accent-bg);
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+  width: 100%;
+  /* TODO: fix conflict between postbox and forms on /feeds */
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+input[type="search"] {
+  border-radius: 0.5rem;
+}
+
+/* Modal for Link Verification and Lightbox  */
+.modal-is-opening dialog,
+.modal-is-opening dialog>figure,
+.modal-is-closing dialog,
+.modal-is-closing dialog>figure {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.modal-is-opening dialog,
+.modal-is-closing dialog {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.modal-is-opening dialog>figure,
+.modal-is-closing dialog>figure {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+.modal-is-closing dialog,
+.modal-is-closing dialog>figure {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  animation-direction: reverse;
+}

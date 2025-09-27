@@ -1,0 +1,4 @@
+{{ define "content" }}
+{{ template "post" (dict "Authenticated" $.Authenticated "User" $.User "TwtPrompt" $.TwtPrompt "MaxTwtLength" $.MaxTwtLength "Subject" $.Subject "AutoFocus" false "CSRFToken" $.CSRFToken "Ctx" . "view" "timeline") }}
+{{ template "feed" (dict "Authenticated" $.Authenticated "User" $.User "Profile" $.Profile "LastTwt" $.LastTwt "Pager" $.Pager "Twts" $.Twts "Ctx" . "view" "discover") }}
+{{ end }}

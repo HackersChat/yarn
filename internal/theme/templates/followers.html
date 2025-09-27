@@ -1,0 +1,55 @@
+{{ define "content" }}
+<article>
+  <hgroup>
+    <h2>{{ tr . "FollowersTitle" }}</h2>
+    <em>
+      {{ if $.User.Is .Profile.URI }}
+      {{ tr . "FollowersFollowingYou" }}
+      {{ else }}
+      {{ (tr . "FollowersFollowingUser" (dict "Username" .Profile.Nick)) | html }}
+      {{ end }}
+    </em>
+  </hgroup>
+  {{ if .Profile.Followers }}
+  <ol>
+    {{ $ctx:=. }}
+    {{ range $f := .Profile.Followers }}
+    <li>
+      {{ if $.User.Is $f.URI }}
+      <a href="{{ $f.URI | trimSuffix "/twtxt.txt" }}">{{ tr $ctx "MeLinkTitle" }}</a>
+      {{ else }}
+      {{ if isLocalURL $f.URI }}
+      <a href="{{ $f.URI | trimSuffix "/twtxt.txt" }}" title="{{ $f.LastSeenAt | time }}">{{ $f.Nick }}</a>
+      {{ else }}
+      <a href="/external?uri={{ $f.URI }}">{{ $f.Nick }}</a>
+      (<a href="{{ $f.URI }}" title="{{ $f.LastSeenAt | time }}">{{ $f.URI }}</a>)
+      {{ end }}
+      <i>Last Seen: {{ $f.LastSeenAt | time }}</i>
+      {{ if $.Authenticated }}
+        {{ if ($.User.Follows $f.URI) }}
+          <a hx-boost="false" class="unfollowBtn" href="/unfollow?nick={{ $.User.FollowsAs $f.URI }}" hx-boost="false" hx-push-url="false" hx-post="/unfollow?nick={{ $.User.FollowsAs $f.URI }}">
+            <i class="ti ti-circle-minus"></i>
+            {{ tr $ctx "UnfollowLinkTitle" }}
+          </a>
+        {{ else }}
+          <a hx-boost="false" class="followBtn" href="/follow?url={{ $f.URI }}" hx-boost="false" hx-push-url="false" hx-post="/follow?url={{ $f.URI }}">
+            <i class="ti ti-circle-plus"></i>
+            {{ tr $ctx "FollowLinkTitle" }}
+          </a>
+        {{ end }}
+      {{ end }}
+      {{ end }}
+    </li>
+    {{ end }}
+  </ol>
+  {{ else }}
+  <p>
+    {{ if $.User.Is .Profile.URI }}
+    {{ (tr . "FollowersNoFollowersSummary" (dict "InstanceName" .InstanceName)) | html }}
+    {{ else }}
+    <b>{{ .Profile.Nick }}</b> {{ tr . "FollowersNoFollowers" }}
+    {{ end }}
+  </p>
+  {{ end }}
+</article>
+{{ end }}

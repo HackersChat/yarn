@@ -1,0 +1,18 @@
+{{ define "content" }}
+{{ template "feed" (dict "Authenticated" $.Authenticated "User" $.User "Profile" $.Profile "LastTwt" $.LastTwt "Pager" $.Pager "Twts" $.Twts "Ctx" . "view" "conv") }}
+{{ if .Authenticated }}
+{{ template "post" (dict "Authenticated" $.Authenticated "User" $.User "TwtPrompt" $.TwtPrompt "MaxTwtLength" $.MaxTwtLength "Subject" $.Subject "AutoFocus" false "CSRFToken" $.CSRFToken "Ctx" . "view" "conv") }}
+{{ else }}
+<article id="twt-join" class="container-fluid">
+  <hgroup>
+    <h2>{{ tr . "ConversationJoinTitle" }}</h2>
+    <em>{{ if .RegisterDisabled }}
+      {{ (tr . "ConversationJoinSummaryLogin") | replace "[[ regallow ]]" "" | html }}
+      {{ else }}
+      {{ (tr . "ConversationJoinSummaryLogin") | replace "[[ regallow ]]" (tr . "ConversationJoinSummaryRegister") | html }}
+      {{ end }}
+    </em>
+  </hgroup>
+</article>
+{{ end }}
+{{ end }}

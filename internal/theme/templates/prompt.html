@@ -1,0 +1,12 @@
+{{ define "content" }}
+<article>
+  <hgroup>
+    <h2>{{ .PromptTitle }}</h2>
+    <em>{{ .PromptMessage | html }}</em>
+  </hgroup>
+  <div id="twobutton">
+    <a id="promptApprove" href="{{ .PromptCallback }}" role="button" class="primary" target="{{ .PromptTarget }}"><i class="ti ti-circle-check"></i> {{ .PromptApprove }}</a>
+    <a id="promptCancel" href="/" role="button" class="contrast"><i class="ti ti-circle-x"></i> {{ .PromptCancel }}</a>
+  </div>
+</article>
+{{ end }}

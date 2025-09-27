@@ -1,0 +1,59 @@
+{{ define "content" }}
+{{ $Peer := (index $.Peers 0) }}
+<article>
+  <hgroup>
+    <h2>{{ tr . "DeletePeerTitle" }}</h2>
+    <em>{{ tr . "DeletePeerSummary" (dict "Peer" $Peer) }}</em>
+  </hgroup>
+  <form action="/manage/delpeer?uri={{ $Peer.URI }}" enctype="multipart/form-data" method="POST">
+    <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+    <table>
+      <tr>
+        <th>{{ tr . "ManagePeersName" }}</th>
+        <td>{{ $Peer.Name }}</td>
+      </tr>
+      <tr>
+        <th>{{ tr . "ManagePeersDescription" }}</th>
+        <td>{{ $Peer.Description }}</td>
+      </tr>
+      <tr>
+        <th>{{ tr . "ManagePeersVersion" }}</th>
+        <td>{{ $Peer.SoftwareVersion }}</td>
+      </tr>
+      <tr>
+        <th>{{ tr . "DeletePeerBuildInformation" }}</th>
+        <td>{{ $Peer.BuildInformation }}</td>
+      </tr>
+      <tr>
+        <th>{{ tr . "ManagePeersLastSeen" }}&nbsp;
+          <span class="help" title="{{ tr . "ManagePeersLastSeenHelp" }}">
+            <i class="ti ti-help"></i>
+          </span>
+        </th>
+        <td>{{ $Peer.LastSeen | time }}</td>
+      </tr>
+      <tr>
+        <th>{{ tr . "ManagePeersLastUpdated" }}&nbsp;
+          <span class="help" title="{{ tr . "ManagePeersLastUpdatedHelp" }}">
+            <i class="ti ti-help"></i>
+          </span>
+        </th>
+        <td>{{ $Peer.LastUpdated | time }}</td>
+      </tr>
+      <tr>
+        <th>{{ tr . "DeletePeerTrustLevel" }}</th>
+        <td>
+          {{ if $Peer.Trusted }}
+              {{ tr . "DeletePeerTrusted" }}
+          {{ else }}
+              {{ tr . "DeletePeerUntrusted" }}
+          {{ end }}
+        </td>
+      </tr>
+    </table>
+
+    <p style="color:red">{{ tr . "DeletePeerConfirm" }}</p>
+    <button type="submit" class="primary">{{ tr . "DeletePeerDeletePeer" }}</button>
+  </form>
+</article>
+{{ end }}

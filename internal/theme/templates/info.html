@@ -1,0 +1,19 @@
+{{ define "content" }}
+  <article>
+    <hgroup>
+      <h2>{{ tr . "InstanceTitle" }}</h2>
+      <em>{{ tr . "InstanceNameInfo" (dict "InstanceName" $.InstanceName) | html }}</em>
+    </hgroup>
+    <div id="versionInfo">
+      <table>
+      <tr><th>PodName</th><td>{{ .InstanceName }}</td></tr>
+      <tr><th>Software</th><td>{{ .SoftwareVersion.Software }}</td></tr>
+      <tr><th>FullVersion</th><td>{{ .SoftwareVersion.FullVersion }}</td></tr>
+      <tr><th>Version</th><td>{{ .SoftwareVersion.Version }}</td></tr>
+      <tr><th>Commit</th><td>{{ .SoftwareVersion.Commit }} {{ .SoftwareVersion.Build }}</td></tr>
+      <tr><th>License</th><td>{{ .SoftwareVersion.License }}</td></tr>
+      <tr><th>Copyright</th><td>{{ .SoftwareVersion.Copyright }}</td></tr>
+      </table>
+    </div>
+  </article>
+{{ end }}

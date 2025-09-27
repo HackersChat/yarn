@@ -1,0 +1,226 @@
+/* Tech debt from pico.css */
+
+/**
+* Grid
+* Minimal grid system with auto-layout columns
+*/
+.grid {
+  grid-column-gap: 0.5rem;
+  grid-row-gap: 0.25rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+}
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+  }
+}
+.grid > * {
+  min-width: 0;
+}
+
+/**
+ * Modal (<dialog>)
+ */
+:root {
+  --scrollbar-width: 0px;
+}
+
+dialog {
+  display: flex;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: inherit;
+  min-width: 100%;
+  height: inherit;
+  min-height: 100%;
+  padding: var(20em);
+  border: 0;
+  background-color: transparent;
+}
+dialog article {
+  max-height: calc(100vh - var(20em) * 2);
+  overflow: auto;
+  background-color: var(--accent-bg);
+  border: 2px solid var(--accent);
+}
+@media (min-width: 576px) {
+  dialog article {
+    max-width: 510px;
+  }
+}
+@media (min-width: 768px) {
+  dialog article {
+    max-width: 700px;
+  }
+}
+dialog article > header,
+dialog article > footer {
+  padding: calc(var(--block-spacing-vertical) * 0.5) var(--block-spacing-horizontal);
+}
+dialog article > header .close {
+  margin: 0;
+  margin-left: var(20em);
+  float: right;
+}
+dialog article > footer {
+  text-align: right;
+}
+dialog article > footer [role=button] {
+  margin-bottom: 0;
+}
+dialog article > footer [role=button]:not(:first-of-type) {
+  margin-left: calc(var(20em) * 0.5);
+}
+dialog article p:last-of-type {
+  margin: 0;
+}
+dialog article .close {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin-top: calc(var(--block-spacing-vertical) * -0.5);
+  margin-bottom: var(--typography-spacing-vertical);
+  margin-left: auto;
+  background-image: var(--icon-close);
+  background-position: center;
+  background-size: auto 1rem;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transition: opacity var(--transition);
+}
+dialog article .close:is([aria-current], :hover, :active, :focus) {
+  opacity: 1;
+}
+dialog:not([open]), dialog[open=false] {
+  display: none;
+}
+
+.modal-is-open {
+  padding-right: var(--scrollbar-width, 0px);
+  overflow: hidden;
+  pointer-events: none;
+}
+.modal-is-open dialog {
+  pointer-events: auto;
+}
+
+:where(.modal-is-opening, .modal-is-closing) dialog,
+:where(.modal-is-opening, .modal-is-closing) dialog > article {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+:where(.modal-is-opening, .modal-is-closing) dialog {
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+:where(.modal-is-opening, .modal-is-closing) dialog > article {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+
+.modal-is-closing dialog,
+.modal-is-closing dialog > article {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  animation-direction: reverse;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--accent-bg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--accent-bg);
+  }
+}
+@-webkit-keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/** 
+ * Loading ([aria-busy=true])
+ */
+ [aria-busy=true] {
+    cursor: progress;
+  }
+  
+  [aria-busy=true]:not(input, select, textarea)::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border: 0.1875em solid currentColor;
+    border-radius: 1em;
+    border-right-color: transparent;
+    content: "";
+    vertical-align: text-bottom;
+    vertical-align: -0.125em;
+    animation: spinner 0.75s linear infinite;
+    opacity: var(--loading-spinner-opacity);
+  }
+  [aria-busy=true]:not(input, select, textarea):not(:empty)::before {
+    margin-right: calc(var(--spacing) * 0.5);
+    margin-left: 0;
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+    -webkit-margin-end: calc(var(--spacing) * 0.5);
+    margin-inline-end: calc(var(--spacing) * 0.5);
+  }
+  [aria-busy=true]:not(input, select, textarea):empty {
+    text-align: center;
+  }
+  
+  button[aria-busy=true],
+  input[type=submit][aria-busy=true],
+  input[type=button][aria-busy=true],
+  input[type=reset][aria-busy=true],
+  a[aria-busy=true] {
+    pointer-events: none;
+  }
+  
+  @keyframes spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }

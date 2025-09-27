@@ -1,0 +1,59 @@
+{{ define "content" }}
+<article class="grid">
+  <!-- ensure that we return to the page from where we clicked login -->
+  <script>
+    window.history.replaceState(null, '', document.referrer)
+  </script>
+  <div>
+    <hgroup>
+      <h2>{{ tr . "LoginTitle" }}</h2>
+      <em>{{ tr . "LoginSummary" (dict "InstanceName" $.InstanceName) }}</em>
+    </hgroup>
+    <form action="/login" method="POST" hx-on::before-request='u("#loginBtn").attr("aria-busy", true);' hx-on::after-on-load='u("#loginBtn").attr("aria-busy", "");'>
+      <fieldset>
+        <label for="username">
+          {{ tr . "LoginFormUsername" }}
+          <input type="text" id="username" name="username" placeholder="{{ tr . "LoginFormUsername" }}" aria-label="Username" autocomplete="nickname" autofocus required>
+        </label>
+        <label for="password">
+          {{ tr . "LoginFormPassword" }}
+          <input type="password" id="password" name="password" placeholder="{{ tr . "LoginFormPassword" }}" aria-label="Password" autocomplete="current-password" required>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="rememberme">
+          <input type="checkbox" id="rememberme" name="rememberme" checked>
+          {{ tr . "LoginFormRemberMe" }}
+          <span class="help" title="{{ tr . "LoginFormRememberMeHelp" }}"><i class="ti ti-help"></i></span>
+        </label>
+      </fieldset>
+      <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+      <input type="hidden" name="referer" value="{{ $.Referer }}">
+      <p class="notice">{{ $.Message }}</p>
+      <button id="loginBtn" type="submit">{{ tr . "LoginFormLogin" }}</button>
+      <p>
+        {{ tr . "LoginNoAccountTitle" }}
+        {{ if not .RegisterDisabled }}
+        <a href="/register">{{ tr . "RegisterLinkTitle" }}</a>
+        {{ tr . "Instead" }}
+        {{ else }}
+        <a href="/join">{{ tr . "JoinLinkTitle" }}</a>
+        {{ tr . "Instead" }}
+        {{ end }}
+      </p>
+      <p><a href="/resetPassword">{{ tr . "ResetPasswordLinkTitle" }}</a></p>
+      <p>
+        <a href="/login/email">{{ tr . "LoginViaEmailAddress" }}</a>
+        <span class="help" title="{{ tr . "LoginViaEmailAddressHowToContent" }}"><i class="ti ti-help"></i></span>
+    </form>
+  </div>
+  <div>
+    <hgroup>
+      <h2>{{ tr . "LoginHowToTitle" }}</h2>
+      <em>{{ tr . "LoginHowToSummary" }}</em>
+    </hgroup>
+    <p>{{ (tr . "LoginHowToContent" (dict "InstanceName" $.InstanceName)) | html }}</p>
+    <p>{{ (tr . "ForgottenPasswordContent") | html }}</p>
+  </div>
+</article>
+{{ end }}

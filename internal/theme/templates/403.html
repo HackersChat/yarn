@@ -1,0 +1,9 @@
+{{ define "content" }}
+  <article class="grid">
+    <hgroup>
+      <h2>{{ tr . "Error403Title" }}</h2>
+      <em>{{ tr . "Error403Content" }}</em>
+      <p>{{ .Message }}</p>
+    </hgroup>
+  </article>
+{{ end }}

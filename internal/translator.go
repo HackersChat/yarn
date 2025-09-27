@@ -1,0 +1,62 @@
+// Copyright 2020-present Yarn.social
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+package internal
+
+import (
+	"fmt"
+	"io/fs"
+
+	"github.com/naoina/toml"
+	"github.com/nicksnyder/go-i18n/v2/i18n"
+	"golang.org/x/text/language"
+
+	"git.mills.io/yarnsocial/yarn/internal/langs"
+)
+
+type Translator struct {
+	Bundle *i18n.Bundle
+}
+
+func NewTranslator() (*Translator, error) {
+	// lang
+	bundle := i18n.NewBundle(language.English)
+	bundle.RegisterUnmarshalFunc("toml", toml.Unmarshal)
+	// English
+	buf, err := fs.ReadFile(langs.LocaleFS, "active.en.toml")
+	if err != nil {
+		return nil, fmt.Errorf("error loading en locale: %w", err)
+	}
+	bundle.MustParseMessageFileBytes(buf, "active.en.toml")
+	// Simplified Chinese
+	buf, err = fs.ReadFile(langs.LocaleFS, "active.zh-CN.toml")
+	if err != nil {
+		return nil, fmt.Errorf("error loading zh-CN locale: %w", err)
+	}
+	bundle.MustParseMessageFileBytes(buf, "active.zh-CN.toml")
+	// Traditional Chinese
+	buf, err = fs.ReadFile(langs.LocaleFS, "active.zh-TW.toml")
+	if err != nil {
+		return nil, fmt.Errorf("error loading zh-TW locale: %w", err)
+	}
+	bundle.MustParseMessageFileBytes(buf, "active.zh-TW.toml")
+
+	return &Translator{
+		Bundle: bundle,
+	}, nil
+}
+
+// Translate 翻译
+func (t *Translator) Translate(ctx *Context, msgID string, data ...interface{}) string {
+	localizer := i18n.NewLocalizer(t.Bundle, ctx.Lang, ctx.AcceptLangs)
+
+	conf := i18n.LocalizeConfig{
+		MessageID: msgID,
+	}
+	if len(data) > 0 {
+		conf.TemplateData = data[0]
+	}
+
+	return localizer.MustLocalize(&conf)
+
+}

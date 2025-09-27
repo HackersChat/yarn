@@ -1,0 +1,130 @@
+{{ define "content" }}
+
+<article class="profile-header">
+
+  <div class="profile-card">
+
+    <a id="profile-avatar" {{ if not (eq $.Profile.Type "External") }}href="{{ $.Profile.URI | trimSuffix "/twtxt.txt" }}" {{ else }}href="/external?uri={{ $.Profile.URI }}" {{ end }} class="u-url">
+      {{ if .Profile.Muted }}<i class="ti ti-ismuted"></i>{{ else }}<i class="ti"></i>{{ end }}
+      {{ if .Profile.Avatar }}
+      <img class="avatar u-photo{{ if .Profile.Muted }} ismuted{{ end }}" {{ if not (eq $.Profile.Type "External") }}src="/user/{{ $.Profile.Nick }}/avatar" {{ else }}src="/externalAvatar?uri={{ $.Profile.URI }}" {{ end }} alt="" loading=lazy />
+      {{ else }}
+      <i class="ti ti-rss" style="font-size:3em"></i>
+      {{ end }}
+    </a>
+
+    <div>
+
+      <hgroup>
+        <h3>{{ .Profile.Nick }}{{ with getFeedTypeClass $.Profile.URI }}&nbsp;<i class="ti ti-{{ . }}"></i>{{ end }}</h3>
+        <em>{{ .Profile.URI | hostnameFromURL }}</em>
+      </hgroup>
+
+      <p>{{ if gt (len .Profile.Description) 0 }}{{ .Profile.Description | replace "\u2028" "<br/>" | html }}{{ else }}<em>{{ tr . "ProfileNoDescription" }}</em>{{ end }}</p>
+
+      <ul id="profile-links">
+        {{ template "profileLinks" (dict "Profile" .Profile "Ctx" .) }}
+      </ul>
+
+    </div>
+
+  </div>
+
+  </div>
+
+  <div id="profile-info">
+
+    {{ if not .Authenticated }}
+    <div class="tabs">
+      <a class="howtoYarn active" href="https://yarn.social/"><i class="ti ti-circle-plus"></i>&nbsp;How to follow...</a>
+    </div>
+    {{ end }}
+
+    {{ if and (.Authenticated) (not (eq .Profile.Nick .User.Username)) }}
+    <div class="tabs">
+      {{ if not $.Profile.Follows }}
+        <a class="followBtn active" href="/follow?url={{ .Profile.URI }}" hx-boost="false" hx-push-url="false" hx-post="/follow?url={{ .Profile.URI }}">
+          <i class="ti ti-circle-plus"></i> {{ tr . "FollowLinkTitle" }}
+        </a>
+      {{ else }}
+        <a class="unfollowBtn" href="/unfollow?nick={{ .User.FollowsAs .Profile.URI }}" hx-boost="false" hx-push-url="false" hx-post="/unfollow?nick={{ .User.FollowsAs .Profile.URI }}">
+          <i class="ti ti-circle-minus"></i> {{ tr . "UnfollowLinkTitle" }}
+        </a>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    <div>
+      <ul>
+        <li><a target="_blank" href="{{ $.Profile.URI }}"><i class="ti ti-link-profile"></i>&nbsp;twtxt.txt</a></li>
+      </ul>
+
+      <ul>
+        {{ if gt $.Profile.NFollowing 0 }}
+        <li id="following">
+          {{ if eq $.Profile.Type "External" }}
+          <a href="/externalFollowing?uri={{ $.Profile.URI }}"> <b>{{ $.Profile.NFollowing }}</b> {{ tr . "ProfileFollowingLinkTitle" }}</a>
+          {{ else }}
+          <a href="/user/{{ $.Profile.Nick }}/following"> <b>{{ $.Profile.NFollowing }}</b> {{ tr . "ProfileFollowingLinkTitle" }}</a>
+          {{ end }}
+        </li>
+        {{ end }}
+
+        {{ if .Authenticated }}
+        {{ if not (eq .Profile.Nick .User.Username) }}
+        {{ if .Profile.Muted }}<li class="profile-muted"><i class="ti ti-volume-3"></i> {{ tr . "ProfileIsMuted" }}</li>{{ end }}
+        {{ if not $.Profile.Muted }}<li class="profile-last-seen"><i class="ti ti-clock"></i> {{ tr . "ProfileLastSeen" }} {{ .Profile.LastSeenAt | lastseen }}</li>{{ end }}
+        <li id="followStat">
+          {{ if .Profile.FollowedBy }}
+          <b>{{ .Profile.Nick }}</b> {{ tr . "ProfileFollowsYou" }}
+          {{ else }}
+          <b>{{ .Profile.Nick }}</b> {{ tr . "ProfileMayNotFollowYou" }}
+          {{ end }}
+        </li>
+        {{ end }}
+        {{ end }}
+      </ul>
+    </div>
+
+    {{ if and (.Authenticated) (not (eq .Profile.Nick .User.Username)) }}
+    <details class="modal">
+      <summary class="mute"><i class="ti ti-urgent"></i>&nbsp;{{ tr . "ProfileToolTitle" }}</summary>
+      <div class="modal">
+        <h3>{{ tr . "ProfileToolTitle" }}</h3>
+        <p>{{ (tr . "ProfileMuteUser" (dict "InstanceName" .InstanceName)) | html }}</p>
+        <span id="muteTool" class="tabs">
+          <a hx-boost="false" class="muteBtn" style="display: {{ if not $.Profile.Muted }}inline{{ else }}none{{ end }} !important;" href="/mute?nick={{ .Profile.Nick }}&url={{ .Profile.URI }}">
+            <i class="ti ti-volume-3"></i> {{ tr . "ProfileMuteLinkTitle" }}
+          </a>
+          <a hx-boost="false" class="unmuteBtn" style="display: {{ if .Profile.Muted }}inline{{ else }}none{{ end }} !important;" href="/unmute?nick={{ .Profile.Nick }}">
+            <i class="ti ti-volume"></i> {{ tr . "ProfileUnmuteLinkTitle" }}
+          </a>
+        </span>
+        <p>{{ (tr . "ProfileReportUser" (dict "InstanceName" .InstanceName)) | html }}</p>
+        <span id="reportTool" class="tabs">
+          <a href="/report?nick={{ .Profile.Nick  }}&url={{ .Profile.URI }}">
+            <i class="ti ti-urgent"></i> {{ tr . "ProfileReportLinkTitle" }}
+          </a>
+        </span>
+      </div>
+    </details>
+    {{ end }}
+  </div>
+
+</article>
+
+{{ if .Authenticated }}
+<details id="postToUser" {{ if and (eq (len $.Twts) 0) (.Authenticated) }}class="nr-twt" {{ end }} data-mention="{{ mentionForProfile .Profile }} " _="init call setupNewPost(me)
+on keyup from body if event.ctrlKey and event.key is 'n' then add @open to me end
+on toggle[my open is true]
+   tell the <textarea/> in me
+     set your value to my @data-mention
+     focus() on yourself
+">
+  <summary><span><i class="ti ti-message"></i>&nbsp;&nbsp;Send {{ .Profile.Nick }} a twt</span></summary>
+  {{ template "post" (dict "Authenticated" $.Authenticated "User" $.User "TwtPrompt" $.TwtPrompt "MaxTwtLength" $.MaxTwtLength "Subject" $.Subject "AutoFocus" false "CSRFToken" $.CSRFToken "Ctx" . "view" "profile") }}
+</details>
+{{ end }}
+
+{{ template "feed" (dict "Authenticated" $.Authenticated "User" $.User "Profile" $.Profile "LastTwt" $.LastTwt "Pager" $.Pager "Twts" $.Twts "Ctx" . "view" "profile") }}
+{{ end }}

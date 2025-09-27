@@ -1,0 +1,135 @@
+/* Pod default (Auto) */
+
+:root {
+  /* Set sans-serif & mono fonts */
+  --sans-font: ui-rounded, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  --border-radius: 0.25rem;
+
+  /* Default (light) theme */
+  --accent-bg: #F9FBFC;
+  /* pico secondary (sat:  1%, bright:  99%) */
+  --accent: #1095c1;
+  /* pico primary */
+  --bg: #fff;
+  --border: #d8dae1;
+  --code: #1095c1;
+  /* pico fade */
+  --disabled: #efefef;
+  --icon: #1095c1;
+  --marked: #ffdd33;
+  --preformatted: #444;
+  --text-light: #585858;
+  --text: #212121;
+  --text-btn: var(--bg);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --accent-bg: #2b2b2b;
+    --accent: #1095c1;
+    /* pico primary */
+    --bg: #212121;
+    --border: #666;
+    --code: #68ABC1;
+    /* pico faded */
+    --disabled: #111;
+    --icon: #1095c1;
+    --preformatted: #ccc;
+    --text-light: #ababab;
+    --text: #dcdcdc;
+    --text-btn: var(--text);
+  }
+
+  /* Add a bit of transparency so light media isn't so glaring in dark mode */
+  img,
+  video {
+    /*opacity: 0.8; */
+    /* TODO: remove this from here or implemtet it correct in all the color schemes? */
+  }
+}
+
+/* Yarn.social Dark */
+html[data-theme="dark-classic"] {
+  --accent-bg: #2b2b2b;
+  --accent: #1095c1;
+  /* pico primary */
+  --bg: #212121;
+  --border: #666;
+  --code: #68ABC1;
+  /* pico faded */
+  --disabled: #111;
+  --icon: #1095c1;
+  --preformatted: #ccc;
+  --text-light: #ababab;
+  --text: #dcdcdc;
+  --text-btn: var(--text);
+}
+
+/* Yarn.social Light */
+html[data-theme="light-classic"] {
+  --accent-bg: #F9FBFC;
+  /* pico secondary (sat:  1%, bright:  99%) */
+  --accent: #1095c1;
+  /* pico primary: #1095c1 */
+  --bg: #fff;
+  --border: #d8dae1;
+  --code: #596b78;
+  /* pico secondary: #596b78 */
+  --disabled: #efefef;
+  --icon: #1095c1;
+  --marked: #ffdd33;
+  --preformatted: #444;
+  --text-light: #585858;
+  --text: #212121;
+  --text-btn: var(--bg);
+}
+
+/* SimpleCSS Dark */
+html[data-theme="dark"] {
+  --accent-bg: #2b2b2b;
+  --accent: #ffb300;
+  --bg: #212121;
+  --border: #666;
+  --code: #f06292;
+  --icon: #ffdd33;
+  /*--code: #ffdd33;*/
+  --disabled: #111;
+  --preformatted: #ccc;
+  --text-light: #ababab;
+  --text: #dcdcdc;
+  --text-btn: var(--bg);
+}
+
+/* SimpleCSS Light */
+html[data-theme="light"] {
+  --accent-bg: #f5f7ff;
+  --accent: #0d47a1;
+  --bg: #fff;
+  --border: #d8dae1;
+  --code: #d81b60;
+  --disabled: #efefef;
+  --icon: #d81b60;
+  --marked: #ffdd33;
+  --preformatted: #444;
+  --text-light: #585858;
+  --text: #212121;
+  --text-btn: var(--bg);
+}
+
+/* Amoled */
+html[data-theme="amoled"] {
+  --accent-bg: #212121;
+  --accent: #1095c1;
+  --bg: #000;
+  --border: #333;
+  --code: #68ABC1;
+  --disabled: #111;
+  --icon: #1095c1;
+  --preformatted: #ccc;
+  --text-light: #ababab;
+  --text: #dcdcdc;
+  --text-btn: var(--text);
+}

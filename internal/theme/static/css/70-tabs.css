@@ -1,0 +1,65 @@
+/**
+ * Tabs
+ * 
+ * from: https://codepen.io/alvarotrigo/pen/RwLzvQz
+ */
+
+nav.tabs {
+  margin-bottom: 1rem;
+}
+.tabs {
+  display: flex;
+  flex-wrap: wrap; /* make sure it wraps*/
+}
+.tabs > label {
+  order: 1; /* Put the labels first */
+  display: block;
+  cursor: pointer;
+  transition: background ease 0.2s;
+}
+
+.tabs > a,
+ul.tabs a,
+.tabs > label {
+  padding: .5rem 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: var(--accent-bg);
+  border: thin solid var(--accent);
+  border-radius: var(--border-radius);
+  color: var(--accent);
+/*  color: var(--text-btn);*/
+  font-weight: initial;
+}
+.tabs .tab {
+  order: 99; /* Put the tabs last */
+  flex-grow: 1;
+  width: 100%;
+  display: none;
+/*  padding: 1rem;*/
+}
+.tabs > input[type="radio"] {
+  display: none;
+}
+.tabs a.current, 
+.tabs a.active, /* TODO: use either .current or .active across the codebase */
+.tabs > input[type="radio"]:checked + label {
+  background: var(--accent);
+  color: var(--text-btn);
+}
+.tabs > input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs > label {
+    /*order: 0; */
+  }
+  .tabs > a,
+  .tabs > label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}

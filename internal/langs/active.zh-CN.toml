@@ -1,0 +1,2091 @@
+[AbuseEmailAddress]
+hash = "sha1-e1b1790da9f9c7d1cc2ecac3d1c4be2f6229f9ba"
+other = "Your email address"
+
+[AbuseFullName]
+hash = "sha1-ab42293e29e1ffb306c1403dd95144d664853a60"
+other = "Your name"
+
+[AbuseMessage]
+hash = "sha1-9f83399936698afef359610a610c848f9b075949"
+other = "We take all reports very seriously! If you are unsure about our community guidelines, please read the <a href=\"/abuse\">Abuse Policy</a>."
+
+[AbuseMessageCaptcha]
+hash = "sha1-e9312bd1b14ea0402dd548180b030e6c19d7c452"
+other = "Captcha"
+
+[AbuseMessageCaptchaMessage]
+hash = "sha1-88758c3aef244e41de7bf377918be88a1cc2a881"
+other = "Please solve this simple math problem below so we know you're a human!"
+
+[AbuseMessageExamples]
+hash = "sha1-b25d2a806bec2d3e25d116e7652dccc39df3c0eb"
+other = "Please provide examples by linking to the content in question. You may paste the /twt/xxxxxxx URLs or simply a list of the hashes. Please also give a brief reason why you believe the community guidelines and therefore <a href=\"/abuse\">Abuse Policy</a> is in direct violation."
+
+[AbuseMessageTitle]
+hash = "sha1-68f4145fee7dde76afceb910165924ad14cf0d00"
+other = "Message"
+
+[AbuseSelectOptionDoxxing]
+hash = "sha1-f369f62e5784256674e9f6f633db2965f34aa65d"
+other = "Posting private information"
+
+[AbuseSelectOptionHarassment]
+hash = "sha1-8fddd79e1918745ff44d284f37e6f5f49191ffb4"
+other = "Harassment"
+
+[AbuseSelectOptionHate]
+hash = "sha1-84c4456c82c202f3712b55542faf1aef9e6c91c9"
+other = "Hate speech"
+
+[AbuseSelectOptionIllegal]
+hash = "sha1-9fa67ba90161db8909e8b59d567ddb564f94f5b2"
+other = "Illegal activities"
+
+[AbuseSelectOptionThreat]
+hash = "sha1-4747e65e7967685183b1c1bd4ed2758db031efcf"
+other = "Threats of violence"
+
+[AbuseSelectTitle]
+hash = "sha1-0f50453f3a0cdfb029d1b33a0e9f9d4eee964ce2"
+other = "Select type of abuse..."
+
+[AbuseSubmitButton]
+hash = "sha1-1ca00033fee3d4e5ee3de55b2d380368d9310d48"
+other = "Submit Report"
+
+[AbuseTitle]
+hash = "sha1-32302082fdc130bbae32b4d8c1a1c8c175e42fa1"
+other = "Report Abuse"
+
+[AbuseWhyMessage]
+hash = "sha1-e463ea53f268bd719b416b3b6abef69a15eed615"
+other = "Please provide your name and email address so we may contact you for further information (<em>if necessary</em>) and so we can inform you of the outcome."
+
+[BookmarkAddTwt]
+hash = "sha1-ac2bfa54407bb541fb8664b510bf56b33ca79222"
+other = "加入书签"
+
+[BookmarkRemoveTwt]
+hash = "sha1-a92b8cfd1f3d8136a08e92926adcb32d6d82069e"
+other = "删除书签"
+
+[BookmarksNoBookmarks]
+hash = "sha1-67d3ef16242b6011a62bccdf9dc15c2a999c5ed6"
+other = "还没有任何书签"
+
+[BookmarksNoBookmarksSummary]
+hash = "sha1-efc43ea07cd5668c0c829258f87f2b33c8e29222"
+other = "还没有书签"
+
+[BookmarksTitle]
+hash = "sha1-ca3cddd25bd8f6bc4ce35a262e2e1398541ecf3d"
+other = "书签"
+
+[BookmarksUser]
+hash = "sha1-825ad45a9df6967dce6f317c2499387b590ebaf1"
+other = "<b>{{ .Username }}</b> 的书签"
+
+[BookmarksYou]
+hash = "sha1-d266af92cbd1cf42a3ff8d2dbf46fa1924dc7de5"
+other = "您的书签"
+
+[ComposeMessageFormBody]
+hash = "sha1-f190c98ece6a67328e369fcdfcf84eea73c94b7e"
+other = "私信内容"
+
+[ComposeMessageFormSend]
+hash = "sha1-9bc2575c3930437e80555f78757b783c842e8e66"
+other = "发送"
+
+[ComposeMessageFormSubject]
+hash = "sha1-8d183dbdcea3b29906090bd83fa6fa37923cc8ec"
+other = "主题"
+
+[ComposeMessageFormUsername]
+hash = "sha1-84c29015de33e5d22422382a372caba5c58f8c01"
+other = "用户名"
+
+[ComposeMessageReplyFormBody]
+hash = "sha1-bf9a79bf82a9b2c0ee324e18bfcc7f088e8cb34b"
+other = "私信内容"
+
+[ComposeMessageReplyFormSend]
+hash = "sha1-9bc2575c3930437e80555f78757b783c842e8e66"
+other = "发送"
+
+[ComposeMessageReplyTitle]
+hash = "sha1-ca6da7b9aa973b9dc68a0f8cb020d4369d5fafaa"
+other = "回信"
+
+[ComposeMessageTitle]
+hash = "sha1-7649c59ec35a7b5d82785e247c60b73c803b20eb"
+other = "写信"
+
+[ConversationInReply]
+hash = "sha1-1fa700bd4a0b3dd0d97b3eb31673f4ce384382de"
+other = "In-reply-to"
+
+[ConversationJoinSummaryLogin]
+hash = "sha1-4c24ddee6ee7e7ae9a2a6da739f740a6e7d7d609"
+other = "<a href=\"/login\">Login</a> [[ regallow ]] to join in on this yarn."
+
+[ConversationJoinSummaryRegister]
+hash = "sha1-30ad4b346eb33e7d4eafdd98629a8758f5e59b7c"
+other = "or <a href=\"/register\">Register</a>"
+
+[ConversationJoinTitle]
+hash = "sha1-6189686e2e9c27d7e4c7b8f5136c06e0fd9e1bf0"
+other = "Participate"
+
+[ConversationOnTwtMessage]
+hash = "sha1-c8cedab48bf9e9ef61e2ed3535a99d933835a028"
+other = "Show conversation for #{{ .Hash }}"
+
+[ConversationRoot]
+hash = "sha1-e96857c58f716104caead648ee6aa61ab8e41cdc"
+other = "Root"
+
+[ConversationSearch]
+hash = "sha1-cea52dc23a28ef35adad2b1e509cb26a9ff7438e"
+other = "Search for this twt hash"
+
+[ConversationSummary]
+hash = "sha1-aaa1126215232f08674eddb9c92731973e67b83d"
+other = "最近回复"
+
+[ConversationTitle]
+hash = "sha1-4de67a4d313139fb2f1d0ad9d2c13d0921ddb131"
+other = "紗"
+
+[Copyright]
+hash = "sha1-493ddbf2f5fa671298131a839b8ce24252e15e61"
+other = "© 2022 <a href='https://git.mills.io/prologic' target='_blank'>James Mills</a>. All rights reserved."
+
+[CopyrightCreator]
+hash = "sha1-ea7ba214f4124bc29a22df99c1f67d5f413245ad"
+other = "Created with 💚 by <a href='https://git.mills.io/prologic' target='_blank'>James Mills</a>"
+
+[CustomLinkAddSubmit]
+hash = "sha1-2cf006b19170d54873467ced16c631aff563e7f9"
+other = "Add Link"
+
+[CustomLinkAddTitle]
+hash = "sha1-a6f299e58aaaca46f83e05de13d75bca9e9c11f7"
+other = "Link Title"
+
+[CustomLinkAddURL]
+hash = "sha1-08738f6eef34333c426e9fb2c58d5a55999d681f"
+other = "Link URL"
+
+[CustomLinkSummary]
+hash = "sha1-baf0d50958c28b349b7256a571a2ef3d39e46a98"
+other = "Here you can add a new link to the User Links section of your profile"
+
+[CustomLinkTitle]
+hash = "sha1-db86eac66fd08d6cdb48fd70674e176d2d44bdb1"
+other = "Add Custom Link"
+
+[DefaultTwtPrompts]
+hash = "sha1-f585553bb01b2326a11e091a6e07c6426d8c5c35"
+other = "你在想什么？\n您的见地非常重要！\n今天是个好日子! 有什么新鲜事？\n今天有什么有趣的事，马上与大家分享！ \n嗨！👋 朋友，别忘了发推文哦！"
+
+[DeleteAccountFormConfirm]
+hash = "sha1-30b058bb7a1cbd2ae222ec6e0d00e22bcaaadac5"
+other = "您确定要删除账号及所有内容? 此操作无法恢复"
+
+[DeleteAccountFormDeleteAll]
+hash = "sha1-97f32d67c7021a7b7f009703c3db00d6bcb78fab"
+other = "全部删除"
+
+[DeleteAccountNoFeedsSummary]
+hash = "sha1-f7e7f28bf453358e2163d12e530797c71c96d4df"
+other = "您没有任何 Feeds。"
+
+[DeleteAccountSummary]
+hash = "sha1-fc2d82acff9d38666535ec7528e90dc904cb659b"
+other = "您的账号将被永久删除！"
+
+[DeleteAccountTitle]
+hash = "sha1-ee1b9a9f2347505649f78cec43af6e1e86231474"
+other = "删除账号"
+
+[DeletePeerBuildInformation]
+hash = "sha1-6a8ac1f5b8561ba2f6c02e34f8f7f15dfa534e04"
+other = "Build Information"
+
+[DeletePeerConfirm]
+hash = "sha1-0cb663152b07a7c8449edbd884a8e1e97b2da612"
+other = "Are you sure you want to delete this peering pod?"
+
+[DeletePeerDeletePeer]
+hash = "sha1-881ea43f13a18194da9d93f129245c95eff7a082"
+other = "Delete Peer"
+
+[DeletePeerSummary]
+hash = "sha1-5499d252da6aa24738e34c9fd96e30ca041360b6"
+other = "Do not peer with {{ .Peer.Name }} anymore"
+
+[DeletePeerTitle]
+hash = "sha1-881ea43f13a18194da9d93f129245c95eff7a082"
+other = "Delete Peer"
+
+[DeletePeerTrustLevel]
+hash = "sha1-055d4afe481d8fffec8cb199139f2741f1ce2aae"
+other = "Trust Level"
+
+[DeletePeerTrusted]
+hash = "sha1-4f62cf340fcebb61fd964982e13df01668651876"
+other = "Trusted, participating in Pod Gossiping"
+
+[DeletePeerUntrusted]
+hash = "sha1-de8f1de5051e9d9a6565d5be2f9ff716b7f47739"
+other = "Untrusted, not participating in Pod Gossiping"
+
+[Error401Content]
+hash = "sha1-b4b65b244ddd4fcee92e9d10ecdb20f123e69260"
+other = "Ooops! The resource you are looking requires authorization or is not accessibly due to user preferences!"
+
+[Error401Title]
+hash = "sha1-1489108281fb1bf67186d5da87cf42ef0042f3c9"
+other = "401 Unauthorized"
+
+[Error403Content]
+hash = "sha1-f5bf5344073142bd6640d46ce4b58a6e0ede2275"
+other = "You are not permitted to access this resource!"
+
+[Error403Title]
+hash = "sha1-9b5ee969ca96ba0d4547a6041c5a86bf80fd4c96"
+other = "403 Forbidden"
+
+[Error404Content]
+hash = "sha1-538ef935a96f67775720f11c5c19e9a90e830f3e"
+other = "Ooops! The resource you are looking for is not here!"
+
+[Error404Title]
+hash = "sha1-5b65037351caeb0e5a48d963d7ffa88d0271d546"
+other = "404 Not Found"
+
+[ErrorAddLink]
+hash = "sha1-2e3c4ce83c2859f0449f42a50d0fc8787ca9c948"
+other = "Error adding link"
+
+[ErrorArchivingFeed]
+hash = "sha1-265e11d3ae2f17ae0711f20540f860031e2fcc96"
+other = "Feed 归档出错"
+
+[ErrorCreateFeed]
+hash = "sha1-88578dc0772a1565b571e16be8cbd5c2ee584162"
+other = "Error creating: {{ .Error }}"
+
+[ErrorDeleteLastTwt]
+hash = "sha1-cd9626a561e932d586d048805638b6137b3aa683"
+other = "删除推文出错"
+
+[ErrorDeletingAccount]
+hash = "sha1-7281529051bbb2b1c2c140a1a023da8975659444"
+other = "删除账号出错"
+
+[ErrorDeletingToken]
+hash = "sha1-1af9bbd37b3a74e097e702ce8a78b9525b9a2948"
+other = "删除令牌出错"
+
+[ErrorFeedNotFound]
+hash = "sha1-d01bdf9ce19f5e183eb2058e4d58a7b5b472f3d4"
+other = "没有找到 Feed"
+
+[ErrorFollowAndValidate]
+hash = "sha1-324741eb80392b09496fa99d49aac1ef8e2fd490"
+other = "Error following {{ .URL }}: {{ .Error }}"
+
+[ErrorFollowingUser]
+hash = "sha1-431d16794490a3bb584a8e13faae06e877902831"
+other = "关注用户出错"
+
+[ErrorGetFeed]
+hash = "sha1-488ffebda10d862ebc11d543467ff05e84a532cb"
+other = "获取 Feed 出错"
+
+[ErrorGetUser]
+hash = "sha1-ae292a347c8c892dff4fc81976b3736fd15cbfc6"
+other = "获取用户出错"
+
+[ErrorHasUserOrFeed]
+hash = "sha1-db844234365b0824c1f33d0f76b7548f2bb866b4"
+other = "用户名 或 Feed 名称已经存在，请选择其它名称！"
+
+[ErrorInvalidFeedName]
+hash = "sha1-4f608638721d3b2c4558421b7cf4dbd47ffc00e7"
+other = "Invalid feed name: {{ .Error }}"
+
+[ErrorInvalidPassword]
+hash = "sha1-52b29810c7c76d469feec362b5c77ccb7531718b"
+other = "密码无效! 提示: 重新设置密码?"
+
+[ErrorInvalidToken]
+hash = "sha1-7ac1506119d660dbaca215d74b0768e238ddc6fa"
+other = "无效 Token"
+
+[ErrorInvalidUsername]
+hash = "sha1-c1d07ba7f57bf718dfb346b21773834cc34c7fcd"
+other = "用户名无效! 提示: 注册一个账号?"
+
+[ErrorLoadingDiscover]
+hash = "sha1-3434b7ad88355029b53bae00f2d21843a18dd611"
+other = "An error occurred while loading discover"
+
+[ErrorLoadingFeed]
+hash = "sha1-488ffebda10d862ebc11d543467ff05e84a532cb"
+other = "加载 Feed 出错"
+
+[ErrorLoadingFeeds]
+hash = "sha1-5662fba6346ae041c64d1c03359096c393fa7ed2"
+other = "加载 Feeds 出错"
+
+[ErrorLoadingLists]
+hash = "sha1-796ea0ecfd7c2e7baa44d92516e9076ac5ba211f"
+other = "An error occurred while loading lists"
+
+[ErrorLoadingMentions]
+hash = "sha1-c6cad6996851c5c491ed46f42993b0941046f79d"
+other = "加载提及数据出错"
+
+[ErrorLoadingPage]
+hash = "sha1-be333bf165f0958ae075b50b9f978e75bd63f940"
+other = "加载页面出错！请联系客服。"
+
+[ErrorLoadingProfile]
+hash = "sha1-6b4851574aeb122eb0eb5551decacc8acfaadb0e"
+other = "加载用户配置出错"
+
+[ErrorLoadingSearch]
+hash = "sha1-9467f15a910dc86e62545b9e20f2b0e756d40646"
+other = "加载搜索数据出错"
+
+[ErrorLoadingTimeline]
+hash = "sha1-aab0d6f0ea631fdcbe5ec82b50b086ae23c5c82a"
+other = "加载动态时发生了错误"
+
+[ErrorMaxFailedLogins]
+hash = "sha1-dbebd52a4449b3d284699bd8f79dc7d55699e754"
+other = "太多次登录失败. 账号临时锁定, 请稍候重试."
+
+[ErrorNoExternalFeed]
+hash = "sha1-851bdf435c847926b563a3b23a7249fe1a605734"
+other = "不能找到外部 Feed"
+
+[ErrorNoFeed]
+hash = "sha1-deeac7f92541e6e5f348dc5becc59db7accdf8aa"
+other = "没有 Feed 指定"
+
+[ErrorNoFeedByNick]
+hash = "sha1-bd7a6b509b846931f05fee9bccd3bfca6870115a"
+other = "No feed found by the nick {{ .Nick }}"
+
+[ErrorNoMatchingTwt]
+hash = "sha1-526a0a4c76372ff65d69af750d50c42d1ba6a9fa"
+other = "没有找到匹配的推文"
+
+[ErrorNoNick]
+hash = "sha1-2e0398c6377124d05a7fcb0a83bc2973692aa17c"
+other = "没有指定取关用户昵称"
+
+[ErrorNoPostContent]
+hash = "sha1-dbb586ba4bf044dc51ea2349c24857415e0dfaa9"
+other = "没有提供内容"
+
+[ErrorNoTag]
+hash = "sha1-2276504b9c8d9474f6b925d51dbf30b488b7e536"
+other = "搜索条件必须提供"
+
+[ErrorNoUser]
+hash = "sha1-cabcfb0173ca7b5ff0b0f90a0ee2207b02d39843"
+other = "没有用户指定"
+
+[ErrorPostingTwt]
+hash = "sha1-3335fb1d3ffbc64fc705a63b65a2fee6563c83b1"
+other = "发表推文出错"
+
+[ErrorRegisterDisabled]
+hash = "sha1-58ae30a9afd39e0111c2d0864b81bb12b799820e"
+other = "当前实例禁止注册, 请联系管理员."
+
+[ErrorRemoveLink]
+hash = "sha1-a0d1b318fdb682f356e2e5cd9598415ad7035091"
+other = "Error removing link"
+
+[ErrorRenderingPage]
+hash = "sha1-765bc9593ea073002bbab83104e0bab31a160733"
+other = "加载页面出错！请联系客服。"
+
+[ErrorSetFeed]
+hash = "sha1-53f11f7d64c54fdbe51c1650696a7a5f1f4fc011"
+other = "更新 Feed 出错"
+
+[ErrorSetUser]
+hash = "sha1-9a04e65e018afb6ef6742adaba4e757b2e5b96ae"
+other = "Error following feed {{ .Nick }}: {{ .URL }}"
+
+[ErrorTimelineLoad]
+hash = "sha1-aab0d6f0ea631fdcbe5ec82b50b086ae23c5c82a"
+other = "加载动态数据时发生了错误"
+
+[ErrorTitle]
+hash = "sha1-7f2f6a15cf8da2b27e5a4af47b58e7ad71c0b3d9"
+other = "错误"
+
+[ErrorTokenExpired]
+hash = "sha1-498985f21872ea50ace30f4f2e3c0f95392ba812"
+other = "Token 已过期"
+
+[ErrorUnfollowingFeed]
+hash = "sha1-62c1d7321abb07ae0ffb2b73cbfa88c538bd8e55"
+other = "Error unfollowing feed {{ .Nick }}: {{ .URL }}"
+
+[ErrorUpdatingUser]
+hash = "sha1-4f65c2690abff8c08713b6d3c5027fdc8eea0f67"
+other = "更新用户出错"
+
+[ErrorUserNotFound]
+hash = "sha1-9acd623494620b9d4d5dbb91781a138357019593"
+other = "用户没有找到"
+
+[ErrorUserOrFeedNotFound]
+hash = "sha1-6a0c81d17564254c7cc8e59f3c34038911a4ed11"
+other = "用户 或 Feed 没有找到"
+
+[ErrorUserRecovery]
+hash = "sha1-4762bb21b3c64efd9e17071f0aca160301597d57"
+other = "错误！电子邮件地址与注册时填写地址不匹配"
+
+[ErrorUsernameExists]
+hash = "sha1-a66924d2fc116739aecea8d10e3ff1fe0570b476"
+other = "用户（已删除）名称已经存在，请选择其它名称！"
+
+[ErrorValidateUsername]
+hash = "sha1-b86a2553887abbb01b95fe85ac6ac4ee9a92d63c"
+other = "Username validation failed: {{ .Error }}"
+
+[FeedManageLinkTitle]
+hash = "sha1-bf58d17e561b1b858e35f9202f811297dac2e9db"
+other = "管理"
+
+[FeedsExternalFeedsSummary]
+hash = "sha1-aad07f929e52d01b7f4abed7c0d4a30337354f7f"
+other = "来自新闻或外部用户的 feeds"
+
+[FeedsExternalFeedsTitle]
+hash = "sha1-eda4203f0af0ea39a3ff084baeb36a5dcee840c0"
+other = "外部 Feeds"
+
+[FeedsFollowFeedHowToContent]
+hash = "sha1-1aa06324ca157a6b2e566f92176b3303650a61ba"
+other = "Enter the URL of an existing twtxt.txt feed or @user@domain handle"
+
+[FeedsFollowFeedSummary]
+hash = "sha1-dce0358ae71f1ffe1a3628ed5f561880881727b1"
+other = "Follow a Twtxt feed"
+
+[FeedsFollowFeedTitle]
+hash = "sha1-66587a7a62a90fc91c4c88f1872bedaa52d23a35"
+other = "Follow"
+
+[FeedsFormCreate]
+hash = "sha1-6e157c5da4410b7e9de85f5c93026b9176e69064"
+other = "创建"
+
+[FeedsFormName]
+hash = "sha1-3a903f81683ea9faa415ebef0a716d930a6483c5"
+other = "Feed名称"
+
+[FeedsHowToContent]
+hash = "sha1-05f39bdc4e264926370abde35c1eedd2e9af4128"
+other = "创建自己感兴趣的 Feed 或 话题并与他人分享。这允许你使用 \"post as\" 新的 Feed 并创建一系列相关的推文 (<i>posts</i>) 。"
+
+[FeedsLocalFeedsContent]
+hash = "sha1-bb7ef9ae3dba4dfeb18a7534df1c6becf5086077"
+other = "这是您可以订阅并关注的本地 Feed 列表。这些是由用户在 {{ .InstanceName }}上创建，实际上是“特殊兴趣”，“主题”或“组”，通过这些 Feed，用户可以以个人身份发布有趣的内容"
+
+[FeedsLocalFeedsSummary]
+hash = "sha1-8738599c8ca4c87588afd38e42f6cf5edce79b74"
+other = "本地可用的 Feed 列表"
+
+[FeedsLocalFeedsTitle]
+hash = "sha1-0e13ac7fae26810c01f86897edf0fa7fb4deee7c"
+other = "本地 Feeds"
+
+[FeedsMyFeedsSummary]
+hash = "sha1-a4a396afca42119579a76d4a1a66d5d5279a3144"
+other = "这是您可以查看或管理的 Feeds"
+
+[FeedsMyFeedsTitle]
+hash = "sha1-d4e95c7858c7cca380da3c6bdd91e5bf0002d2cb"
+other = "我的 Feeds"
+
+[FeedsNoFeedsSummary]
+hash = "sha1-876529acc2ed0d57903292b5c4dd4869cd2f3108"
+other = "您还没有 Feed，<a href=\"#create\">创建</a> 一个？"
+
+[FeedsSummary]
+hash = "sha1-351a6b26b69cc08ab69024f162aca2e13b9d7e57"
+other = "创建一个本地 Feed"
+
+[FeedsTitle]
+hash = "sha1-074e5c72245f23f1864a151844ef4ffd970aeca2"
+other = "创建 Feed"
+
+[FilterNavLabel]
+hash = "sha1-96e578211aa295317cf257310712fa28ccd8f6c6"
+other = "Filters"
+
+[FilterTitle_clear]
+hash = "sha1-381c4bf1d409c0271f73195c2f3c68225ec7c00c"
+other = "Clear Filters"
+
+[FilterTitle_excludeme]
+hash = "sha1-102b6213d2e069f6ea8e10dbfe22f1fe32dd3496"
+other = "Hide my posts"
+
+[FilterTitle_localonly]
+hash = "sha1-7a28a960d5020f90caae43f2c6a297527e5953ba"
+other = "Only {{ .InstanceName }}"
+
+[FilterTitle_mediaonly]
+hash = "sha1-aaaa16e3257a7cab32f4dd4e2ffc749b4a232e1b"
+other = "Images/videos"
+
+[FilterTitle_mentionsme]
+hash = "sha1-85e12bc6f2e56024e47cc826a14968247a52dc54"
+other = "Mentions"
+
+[FilterTitle_nobots]
+hash = "sha1-56dc31961dd1059fd2086c1b57c998ce7b5ed790"
+other = "Hide Bots"
+
+[FilterTitle_noop]
+hash = "sha1-6a72085653e4c5be8c7640c868ef787cbcf063d1"
+other = "All"
+
+[FilterTitle_noreplies]
+hash = "sha1-59c6bbf03b541b7f5e65ca704429a552b2e6988b"
+other = "Without replies"
+
+[FilterTitle_norss]
+hash = "sha1-39b28771d9c1019cb39dba837bbf74f1fdd47dd5"
+other = "Hide Feeds"
+
+[FollowExternal]
+hash = "sha1-6449ded9eb3838ce1579d2fc82ed24244cabe678"
+other = "Details on followers are not available on external feeds."
+
+[FollowFormFollow]
+hash = "sha1-66587a7a62a90fc91c4c88f1872bedaa52d23a35"
+other = "关注"
+
+[FollowFormNickname]
+hash = "sha1-a13b2d85f9a867e6b997e106d7d78903f8201691"
+other = "昵称"
+
+[FollowFormURI]
+hash = "sha1-17f317463461849782e8e7617ee0089819fe4424"
+other = "URL of a Twtxt feed or Yarn Handle (e.g: @user@domai)"
+
+[FollowHowToContent]
+hash = "sha1-28d94b74e71b2b65f4299219080260f2b556fa95"
+other = "需要从另一个客户端导入提要列表吗？使用<a href=\"/import\">导入</a>功能。您还可以在/ <a href=\"/discover\">发现</a>页面上的{{ .InstanceName }}实例上找到其他用户（假设他们已发布），或在<a href=\"/feeds\">订阅</a>页面上找到其他外部feed的来源。"
+
+[FollowLinkTitle]
+hash = "sha1-66587a7a62a90fc91c4c88f1872bedaa52d23a35"
+other = "关注"
+
+[FollowSummary]
+hash = "sha1-663405cfecbcf8daebd116d839113aac7cb00f7d"
+other = "关注用户或订阅"
+
+[FollowTitle]
+hash = "sha1-66587a7a62a90fc91c4c88f1872bedaa52d23a35"
+other = "关注"
+
+[FollowersFollowingUser]
+hash = "sha1-5d8880619b0c9343fcad11867c6969e10728accc"
+other = "<b>{{ .Username }}</b> 的粉丝"
+
+[FollowersFollowingYou]
+hash = "sha1-c423c69e2673ceefd3e3fe1645423b689d492fe8"
+other = "您的粉丝"
+
+[FollowersNoFollowers]
+hash = "sha1-a76c590e42eb904baf7fa2c68c9cf5e17c848b30"
+other = "还没有粉丝"
+
+[FollowersNoFollowersSummary]
+hash = "sha1-be479396852a114469ca91160b52427ecb6e86a6"
+other = "您还没有粉丝! 发表一篇推文, 它将出现在a href=\"/discover\">发现</a> 页，{{ .InstanceName }} 实例的所有用户都可以<a href=\"/follow\">关注</a>您。"
+
+[FollowersTitle]
+hash = "sha1-78eaabf4a629795fe52f523f44f5000c6b204f2f"
+other = "粉丝"
+
+[FollowingFollowingUser]
+hash = "sha1-fbf827af5e0df2f2953a555ec1e874fb441aa425"
+other = "<b>{{ .Username }}</b> 关注列表"
+
+[FollowingFollowingYou]
+hash = "sha1-a9c227473605df6d6e02aaa04582c2590e5a55b0"
+other = "您的关注列表"
+
+[FollowingNoFollowing]
+hash = "sha1-5a97124f8ccf9c1a9c45a2ba262842bc995881c8"
+other = "还没有关注"
+
+[FollowingNoFollowingSummary]
+hash = "sha1-e7126442e3aec24310ca86baad67a4e36697b077"
+other = "您还没有关注任何用户或 Feeds！<a href=\"/follow\">关注</a> 某人或 <a href=\"/discover\">发现</a> 新用户或感兴趣的 <a href=\"/feeds\">feeds</a> on {{ .InstanceName }}。"
+
+[FollowingTitle]
+hash = "sha1-90eeb100838048513e8d2290a6892e18077c24f6"
+other = "关注"
+
+[FooterPod]
+hash = "sha1-4a3b42640d5e1d2192eb37a74aa4cfdbc1c3f2d3"
+other = "a <a href=\"https://yarn.social\" target=\"_blank\">Yarn.social</a> pod."
+
+[FooterRunning]
+hash = "sha1-69418ea407467a104e1d4d11b1b06ad0ba862dd2"
+other = "Running <a href=\"https://git.mills.io/yarnsocial/yarn\" target=\"_blank\">yarnd</a>"
+
+[ForgottenPasswordContent]
+hash = "sha1-f6a964d4275e939efff27ff279dda09b5b04139f"
+other = "If you have forgotten your password you can request a <a href=\"/resetPassword\">password reset</a> as long as you remember your username and email address you signed up with and retain access to your email<br><br><em>We <strong>NEVER</strong> store your email address!</em>."
+
+[ImportLinkTitle]
+hash = "sha1-3f9c4097fa029c9ee234eac48f2ecf4792c29191"
+other = "Import Feeds"
+
+[ImportSummary]
+hash = "sha1-1ba7ba788efa28833b0904c5777b4d2a0d77be94"
+other = "Import feeds to follow multiple users or feeds or import from another client"
+
+[ImportTip]
+hash = "sha1-4bda2451f2c1df94e77487e1f685d2385095cdf5"
+other = "Feeds in nick: url, one per line!"
+
+[ImportTitle]
+hash = "sha1-3f9c4097fa029c9ee234eac48f2ecf4792c29191"
+other = "Import Feeds"
+
+[IndieAuthApprove]
+hash = "sha1-7b2c7f146abaceddea3a325e15cfbbf2fa9b976e"
+other = "Approve"
+
+[IndieAuthCancel]
+hash = "sha1-77dfd2135f4db726c47299bb55be26f7f4525a46"
+other = "Cancel"
+
+[IndieAuthMessage]
+hash = "sha1-df56eaed9d3e8336edbadac3f05d206a397821c9"
+other = "The app <b>%s</b> wants to access your <b>%s</b> account."
+
+[IndieAuthTitle]
+hash = "sha1-013e6cef1a9b52183ef3df75be734b94ce222c25"
+other = "Authorise Login"
+
+[InstanceNameInfo]
+hash = "sha1-bb97ffe973568947d8903b91c044bd17dee96723"
+other = "About the <b>{{ .InstanceName }}</b> Yarn.social pod."
+
+[InstanceTitle]
+hash = "sha1-914e2403bda42fb7ddb728a9337741354d4ab938"
+other = "Pod Information"
+
+[Instead]
+hash = "sha1-6568964b0e39083c6acb94093d9e6cd117dbe508"
+other = "."
+
+[JoinLinkTitle]
+hash = "sha1-3eccd3825bf3c6ef19c404588ba043d336914e20"
+other = "/join"
+
+[LinkVerifyApprove]
+hash = "sha1-dda6ac27b9d3b234a68e8b2c412e90ab5a03a4e1"
+other = "Verify"
+
+[LinkVerifyCancel]
+hash = "sha1-77dfd2135f4db726c47299bb55be26f7f4525a46"
+other = "Cancel"
+
+[LinkVerifyMessage]
+hash = "sha1-c9fb1362d9b51a3752351b0b53e9579df6bcda6c"
+other = "You are about to visit a link that is external to <strong>{{ .InstanceName }}</strong>. Please verify the URL before continuing."
+
+[LinkVerifyNoURL]
+hash = "sha1-7615c8d9ba516af03858134992e383d2b0e20bf8"
+other = "No external URL provided."
+
+[LinkVerifyTitle]
+hash = "sha1-a8748e2f6fb8a27630517bf258a863c8f0ac579f"
+other = "Verify External Link"
+
+[LoginEmailSummary]
+hash = "sha1-03c7f05f45360aa1104947aff50c89adb4b76865"
+other = "Login to your Yarn.Social account on {{ .InstanceName }} via your Email Address"
+
+[LoginEmailTitle]
+hash = "sha1-15bfa4e76b3774215b32e0778675ad18c23f71df"
+other = "Login via Email"
+
+[LoginFormEmailAddress]
+hash = "sha1-09ba557fd106f1019ec6739113e3e28dea4bd9a6"
+other = "Email Address"
+
+[LoginFormEmailLogin]
+hash = "sha1-15bfa4e76b3774215b32e0778675ad18c23f71df"
+other = "使用电子邮箱登录"
+
+[LoginFormLogin]
+hash = "sha1-4e5a2893bdcc7d239c1db72e4c4ffbe4bea73174"
+other = "登录"
+
+[LoginFormPassword]
+hash = "sha1-8be3c943b1609fffbfc51aad666d0a04adf83c9d"
+other = "密码"
+
+[LoginFormRemberMe]
+hash = "sha1-06716884880fe454166b2b598e01544d1aefd999"
+other = "记住我?"
+
+[LoginFormRememberMeHelp]
+hash = "sha1-f2a940aebab074814b5c003c9475d1ff2a9038c3"
+other = "Unchecking this box will result in a shorter session. This is ideal if you are logging in from a shared device. Otherwise the default, checked, will ensure your login session lasts longer and improves your overall experience without logging you out frequently."
+
+[LoginFormUsername]
+hash = "sha1-84c29015de33e5d22422382a372caba5c58f8c01"
+other = "用户名"
+
+[LoginHowToContent]
+hash = "sha1-2a9638740c4ca9582550d44989ab93d9f2138998"
+other = "Login to your Yarn.social account on {{ .InstanceName }} by filling in the Username and Password you used when you created your account.<br><br><b>IMPORTANT:</b> Uncheck the \"Remember Me\" box if you are using a shared device!<br><br>Don't have an account? You can create a new account on the <a href=\"/register\">register</a> form."
+
+[LoginHowToSummary]
+hash = "sha1-9755be11397df0cf000dd5f31971c1b8e6f0d581"
+other = "Quick guide to help you login"
+
+[LoginHowToTitle]
+hash = "sha1-097f2ed883de33056433137a3d1ddc53da9931df"
+other = "如何登录"
+
+[LoginNoAccountSummary]
+hash = "sha1-f838dc11db151df79ee689f598453d38bbac6fe9"
+other = "还没有账号"
+
+[LoginNoAccountTitle]
+hash = "sha1-f838dc11db151df79ee689f598453d38bbac6fe9"
+other = "还没有账号"
+
+[LoginSummary]
+hash = "sha1-2a0ca9329bc030eb18c50ceb59d0743b6b325713"
+other = "Login to your Yarn.social account on {{ .InstanceName }}"
+
+[LoginTitle]
+hash = "sha1-4e5a2893bdcc7d239c1db72e4c4ffbe4bea73174"
+other = "Login"
+
+[LoginViaEmailAddress]
+hash = "sha1-b0f08896b0b1c32dd0d8789f91ffd6b291b4f655"
+other = "Send me a login link via email"
+
+[LoginViaEmailAddressHowToContent]
+hash = "sha1-e73e2ea7a7c406647b68308226c34556dffc5139"
+other = "You'll receive a login link in your inbox"
+
+[LoginViaUsernamePassword]
+hash = "sha1-44d1e821e75d13e05d7122c05a0af3a06a0dbdf9"
+other = "使用账号密码登录"
+
+[ManageFeedDeleteConfirm]
+hash = "sha1-2ae4a1888687aa99dee6a9b565e323d1f3f338fe"
+other = "Are you sure you want to delete this feed?"
+
+[ManageFeedDeleteSummary]
+hash = "sha1-fe87884b05a6d6092b978938bcdba1dcbe2027af"
+other = "Your feed will be deleted permanently!"
+
+[ManageFeedDeleteTitle]
+hash = "sha1-cdf081498909a5f915c8a8e2b9740d02c1f5c8e9"
+other = "Delete Feed"
+
+[ManageFeedFormChangeAvatarTitle]
+hash = "sha1-e8d33553f61394cb4675e07f4b05e5735a734b93"
+other = "Change Avatar"
+
+[ManageFeedFormDescription]
+hash = "sha1-e132e63f2c89c89b6ca9faa87847f37c38948200"
+other = "关于这个 Feed 的描述"
+
+[ManageFeedFormDescriptionTitle]
+hash = "sha1-55f8ebc805e65b5b71ddafdae390e3be2bcd69af"
+other = "描述"
+
+[ManageFeedFormUpdate]
+hash = "sha1-fb91e24fa52d8d2b32937bf04d843f730319a902"
+other = "更新"
+
+[ManageFeedFormUploadAvatarTitle]
+hash = "sha1-eb634e962b0d38de3d6aef32f9c5ca4d42c5de13"
+other = "Upload avatar"
+
+[ManageFeedSummary]
+hash = "sha1-6e9f729d844f2857aeb53dbc980112ecb7d03c49"
+other = "Manage <strong>{{ .Username }}</strong> details"
+
+[ManageFeedTitle]
+hash = "sha1-9c0a564e987c4e336259158190de22d7fa2085af"
+other = "Feed 管理"
+
+[ManageJobsRunButton]
+hash = "sha1-2af00e23c480ba779fddda60673b28364ccb8e89"
+other = "Run now"
+
+[ManageJobsSummary]
+hash = "sha1-a3cc5c3a7915a00414faddc3191b3be03d10d3d4"
+other = "Force run any of the scheduled background jobs"
+
+[ManageJobsTableLast]
+hash = "sha1-71edaf7caca42b6fb2aca455484d372048f7b3e2"
+other = "Last Run"
+
+[ManageJobsTableName]
+hash = "sha1-709a23220f2c3d64d1e1d6d18c4d5280f8d82fca"
+other = "Name"
+
+[ManageJobsTableNext]
+hash = "sha1-e560c48929c724831c1134ccfb6e514ff32f859d"
+other = "Next Run"
+
+[ManageJobsTitle]
+hash = "sha1-31842c70d9a4fe8fa0668614629dd17df4424893"
+other = "Manage Jobs"
+
+[ManagePeersActions]
+hash = "sha1-c3cd636a585b20c40ac2df5ffb403e83cb2eef51"
+other = "Actions"
+
+[ManagePeersDelete]
+hash = "sha1-f6fdbe48dc54dd86f63097a03bd24094dedd713a"
+other = "Delete"
+
+[ManagePeersDeleteHelp]
+hash = "sha1-02f5848ff6cb9e63b6daf2c6129cf14b32454902"
+other = "View peer information and possibly delete peering pod"
+
+[ManagePeersDescription]
+hash = "sha1-55f8ebc805e65b5b71ddafdae390e3be2bcd69af"
+other = "Description"
+
+[ManagePeersLastSeen]
+hash = "sha1-20c226fb3237bbee6237cb37e62401bb00cbb011"
+other = "Last Seen"
+
+[ManagePeersLastSeenHelp]
+hash = "sha1-3ad4def14803453488ab575243f72114b37384c2"
+other = "When this pod saw the peering pod the last time (e.g. when the peer requested a feed on this pod or this pod fetched a feed on the peer)"
+
+[ManagePeersLastUpdated]
+hash = "sha1-66f3e18075fb42d2003d95a74b5ddd36a1d5fca0"
+other = "Last Updated"
+
+[ManagePeersLastUpdatedHelp]
+hash = "sha1-be328858e57406c260852ebc7064e303d6ad5f47"
+other = "When this pod fetched the peering pod's information the last time (once a day)"
+
+[ManagePeersLinkTitle]
+hash = "sha1-db6cc34650aebce8c32e73a2caa4165fb376002a"
+other = "管理 Peers"
+
+[ManagePeersName]
+hash = "sha1-709a23220f2c3d64d1e1d6d18c4d5280f8d82fca"
+other = "Name"
+
+[ManagePeersSummary]
+hash = "sha1-469133ec0d66f4e07e5bf21a8eff4303ce2466c9"
+other = "Discovered {{ .Peers | len }} peering Pods"
+
+[ManagePeersTitle]
+hash = "sha1-db6cc34650aebce8c32e73a2caa4165fb376002a"
+other = "Manage Peers"
+
+[ManagePeersTrustPeer]
+hash = "sha1-33a579ffc0dccbff15be01734ea4138ea4e7635c"
+other = "Trust"
+
+[ManagePeersTrustPeerHelp]
+hash = "sha1-d146e14b3a372b8cf96a6d916828f1715af29aff"
+other = "This peer is currently not trusted, mark it trusted"
+
+[ManagePeersTrustedPeersHelp]
+hash = "sha1-cf3d68868bec5bfcf0db599bd67d785c856f3e8e"
+other = "Only trusted peers will participate in Pod Gossiping. That means they can be automatically queried for missing root twts. Be careful whom you trust, though! Trusted peers are technically able to poisen your cache with fake twts without you ever knowing."
+
+[ManagePeersUntrustPeer]
+hash = "sha1-10f4bdce566de3778f45205a36da4ec3991c07e6"
+other = "Untrust"
+
+[ManagePeersUntrustPeerHelp]
+hash = "sha1-1d42aaaceff8424efeec6865dc2b87a8fda2df84"
+other = "This peer is currently trusted, mark it untrusted"
+
+[ManagePeersVersion]
+hash = "sha1-e77f785249446d822e05bd62647409f60b8dd3fb"
+other = "Pod Version"
+
+[ManagePodAlertFloat]
+hash = "sha1-5c855ee8150d593d5e92b72bc6f7c1d9beb45e62"
+other = "Floating Message"
+
+[ManagePodAlertGuest]
+hash = "sha1-fcc66745272797c64bce845ae3858f7b7e7bc132"
+other = "Include Guests"
+
+[ManagePodAlertMessageHelp]
+hash = "sha1-39f2e59961635799fabd732e04168d1be3816db8"
+other = "Leave empty to disable alert"
+
+[ManagePodAlertMessageTitle]
+hash = "sha1-ae282033ea198c09cb5cd3eabcd4db89f5a08b8e"
+other = "Pod Alert Message"
+
+[ManagePodAlertOptions]
+hash = "sha1-48d1cfaac400be410c963fda96488442cc595120"
+other = "Pod Alert Options"
+
+[ManagePodAlertTypePanic]
+hash = "sha1-4b6d6a30150a506f9b79caf45da5aecb76b0018e"
+other = "Important"
+
+[ManagePodAlertTypeSafe]
+hash = "sha1-9525ae1781bb71fc767a9bab4b6f299ac5cc8c5d"
+other = "Safe"
+
+[ManagePodAlertTypeTitle]
+hash = "sha1-517e3b1a07991cca5001d41653462c92bdabca82"
+other = "Pod Alert Type"
+
+[ManagePodAlertTypeUpdate]
+hash = "sha1-fb91e24fa52d8d2b32937bf04d843f730319a902"
+other = "Update"
+
+[ManagePodAlertTypeWarn]
+hash = "sha1-e9c45563358e813f157ba81b33143542165ba84e"
+other = "Warning"
+
+[ManagePodBlockedFeeds]
+hash = "sha1-4eef3cf1965b4c6b41f7f1394177f4a3c1a7d24d"
+other = "Blocked Feeds"
+
+[ManagePodCustomCSS]
+hash = "sha1-32e91ca2bc1fc72a1f229105a73d9f773266cdc3"
+other = "Custom Pod CSS"
+
+[ManagePodCustomCSSHelp]
+hash = "sha1-eb2da2cf6344adf47dff87c3ce337245d24dc098"
+other = "Use this to override any CSS styles that are present on this pod."
+
+[ManagePodCustomJS]
+hash = "sha1-b6db9c363e66ffcb9fce15176053f557e412425f"
+other = "Custom Pod JS"
+
+[ManagePodCustomJSHelp]
+hash = "sha1-83893e527bd4516534a47b92d290d5d1a4838fcf"
+other = "Use this to add additional custom Javascript you need for this pod."
+
+[ManagePodCustomLogo]
+hash = "sha1-6f6458fd4a07273f71eff6e62afa40fecf42cebd"
+other = "Custom Pod Logo"
+
+[ManagePodCustomLogoHelp]
+hash = "sha1-cd8f0967141ae7119a3eeb5096f2718aa9154b0b"
+other = "You can use the template variable &#123;&#123; .PodName &#125;&#125; in your logo."
+
+[ManagePodDescription]
+hash = "sha1-5ab944b1026b65ab6232f61896dd72258e2b4b8e"
+other = "Pod Description"
+
+[ManagePodDescriptionHelp]
+hash = "sha1-1019e379fc7064e99628c34d0f2e70925af8f6c3"
+other = "Describe your Pod in detail, what is it about?"
+
+[ManagePodEmbedRules]
+hash = "sha1-b14a8fcc142f7ab9b3ccebabdcf4184aec31e0a1"
+other = "Embed Rules"
+
+[ManagePodEmbedRulesHelp]
+hash = "sha1-300a7726bb89abf8283a98688772207f0769a32c"
+other = "Use this to add custom rules for converting links to embed elements."
+
+[ManagePodLinkTitle]
+hash = "sha1-0cf5b0b8b7f4dc729cd3230988a0a5bb3834e01e"
+other = "管理 Pod"
+
+[ManagePodMediaSettings]
+hash = "sha1-924ed909c31c629b202e851d87cd7829d3010130"
+other = "Media Settings"
+
+[ManagePodMediaSettingsDisplay]
+hash = "sha1-549b4c14abe393afd6991826c465b14fcf7c0951"
+other = "Display media"
+
+[ManagePodMediaSettingsOriginal]
+hash = "sha1-696d3a3d75ad87aaae38aa497af6227d1acaa0bb"
+other = "Use original media"
+
+[ManagePodName]
+hash = "sha1-48554e123b4818a1fcfc125e8e6e712f17df3df5"
+other = "Pod Name"
+
+[ManagePodNameHelp]
+hash = "sha1-80d293afc5a85c9292cd8a0d7d2130356975e25e"
+other = "A unique name for your Pod"
+
+[ManagePodOptionCache]
+hash = "sha1-820f6b0deff7fdc081825ab624ce289175235630"
+other = "Refresh Cache"
+
+[ManagePodOptionCacheConfirm]
+hash = "sha1-18044ae10896a70f095b9c3d0544a5e7c40047d4"
+other = "Are you sure you want to delete and refresh ths cache?"
+
+[ManagePodOptionJobs]
+hash = "sha1-31842c70d9a4fe8fa0668614629dd17df4424893"
+other = "Manage Jobs"
+
+[ManagePodOptionPeers]
+hash = "sha1-db6cc34650aebce8c32e73a2caa4165fb376002a"
+other = "Manage Peers"
+
+[ManagePodOptionUsers]
+hash = "sha1-751f7d627ad7fe72372b355b1cd24895dc08b8f3"
+other = "Manage Users"
+
+[ManagePodOptionalFeatures]
+hash = "sha1-c8ca0a56d65d26dee24917a6c97b2b4ca338e82a"
+other = "Enabled Optional Features"
+
+[ManagePodOtherSettings]
+hash = "sha1-30b66a8e60d3305cc1ae4738fdf802f4d058b8c8"
+other = "Other Settings"
+
+[ManagePodOtherSettingsOpenProfile]
+hash = "sha1-9194b2225778f14125d770898cf913ec96f81d97"
+other = "Allow open profiles"
+
+[ManagePodOtherSettingsRegistration]
+hash = "sha1-3fc380063591b6a5bab8af2427c6959fbcca0ee1"
+other = "Allow open registrations"
+
+[ManagePodOtherSettingsSupport]
+hash = "sha1-fd19083ab05661aa97a992b16f13a14a901cfa72"
+other = "Disable Support"
+
+[ManagePodPermittedImageDomains]
+hash = "sha1-06153c0e0f405f78995607b80e0e85ec9c82396a"
+other = "Permitted Domains"
+
+[ManagePodResolutionAvatar]
+hash = "sha1-a3ac7d77b58fcc0d988e63e92eb22efd856a0aa8"
+other = "Avatar Resolution"
+
+[ManagePodResolutionAvatarHelp]
+hash = "sha1-d9fb3d1ad8d4cabba84711fa96ac8a5f2e7dbec7"
+other = "Avatar resolution in pixels"
+
+[ManagePodResolutionMedia]
+hash = "sha1-0066b663336677a4e05a6cfdc5c900f5fbc797d1"
+other = "Media Resolution"
+
+[ManagePodResolutionMediaHelp]
+hash = "sha1-c872eb2b8cd61fb58cec982ccf308cc7e282d089"
+other = "Media resolution in pixels"
+
+[ManagePodSummary]
+hash = "sha1-b7359258ddccba06075ecae2e71e2d3b0c0ff7e9"
+other = "Administer your Pod and update settings here"
+
+[ManagePodTwtMaxLength]
+hash = "sha1-30e3525230b52765e241cf55880317cb91da515d"
+other = "Max Twt Length"
+
+[ManagePodTwtMaxLengthHelp]
+hash = "sha1-dca749e5215f71abc9ed657e5f92b1ad0007d291"
+other = "Number of characters allowed per twt"
+
+[ManagePodTwtPerPage]
+hash = "sha1-549dfb01094ea4baf528ac914c84c2d2f503d8b7"
+other = "Twts Per Page"
+
+[ManagePodTwtPerPageHelp]
+hash = "sha1-2ef2026f4405b8795c1de1e58afa0c95c0cdc8c9"
+other = "Number of Twts to display per page"
+
+[ManagePodUpdateButton]
+hash = "sha1-fb91e24fa52d8d2b32937bf04d843f730319a902"
+other = "Update"
+
+[ManageRefreshCacheTitle]
+hash = "sha1-820f6b0deff7fdc081825ab624ce289175235630"
+other = "刷新缓存"
+
+[ManageUsersFeedDelete]
+hash = "sha1-cdf081498909a5f915c8a8e2b9740d02c1f5c8e9"
+other = "Delete Feed"
+
+[ManageUsersFeedDeleteConfirm]
+hash = "sha1-0e16aa45a336097e3591a5e1b8575d4c6357c367"
+other = "Are you sure you want to delete this feed? This cannot be undone!"
+
+[ManageUsersFeedDeleteName]
+hash = "sha1-2934f77b579a3741475bea66fc720d664f292daa"
+other = "Feed Name"
+
+[ManageUsersLinkTitle]
+hash = "sha1-751f7d627ad7fe72372b355b1cd24895dc08b8f3"
+other = "管理用户"
+
+[ManageUsersSummary]
+hash = "sha1-a34ad52d0ced934ba3d0c0f1b750a5844fc70471"
+other = "Add / Remove Users"
+
+[ManageUsersUserAdd]
+hash = "sha1-874393854692c1377600a682c1b575b351a7625e"
+other = "Add User"
+
+[ManageUsersUserAddEmail]
+hash = "sha1-09ba557fd106f1019ec6739113e3e28dea4bd9a6"
+other = "Email Address"
+
+[ManageUsersUserAddHelp]
+hash = "sha1-c91f9e8f3a0bf9839867c821bcd18ba06d8b6b98"
+other = "Once created, the new user can reset their password via the \"Reset Password\" functionality."
+
+[ManageUsersUserAddUsername]
+hash = "sha1-84c29015de33e5d22422382a372caba5c58f8c01"
+other = "Username"
+
+[ManageUsersUserDelete]
+hash = "sha1-0a0a90f6c5a99223b71ca992b6c52fb82feb64b5"
+other = "Delete User"
+
+[ManageUsersUserDeleteConfirm]
+hash = "sha1-e2d5cdbc31dd97cb3606fbd52a62529f43352970"
+other = "Are you sure you want to delete this user? This cannot be undone!"
+
+[ManageUsersUserDeleteName]
+hash = "sha1-84c29015de33e5d22422382a372caba5c58f8c01"
+other = "Username"
+
+[ManageUsersUserReset]
+hash = "sha1-3fb75e3bfe4de94eb5198656fa9de95352dab915"
+other = "Reset Password"
+
+[ManageUsersUserResetConfirm]
+hash = "sha1-966e540195c8128741364a73828aa75f28146621"
+other = "Are you sure you want to reset the passsword for this user? This cannot be undone!"
+
+[ManageUsersUserResetUsername]
+hash = "sha1-84c29015de33e5d22422382a372caba5c58f8c01"
+other = "Username"
+
+[MeLinkTitle]
+hash = "sha1-b1c1d8736f20db3fb6c1c66bb1455ed43909f0d8"
+other = "我"
+
+[MenuAbout]
+hash = "sha1-6b21fb791ac05170893860c248401cd24a59b732"
+other = "关于我们"
+
+[MenuAbuse]
+hash = "sha1-411d6ee2454b2cd4eada9d338861ed000fc07b6e"
+other = "滥用政策"
+
+[MenuAtom]
+hash = "sha1-41dded417052424bdcf3c39f6c8664147fae6806"
+other = "Atom"
+
+[MenuHelp]
+hash = "sha1-c47ae15370cfe1ed2781eedc1dc2547d12d9e972"
+other = "帮助"
+
+[MenuPrivacy]
+hash = "sha1-cf01481f626d5127ec7732fcbdb29504f08abefd"
+other = "隐私"
+
+[MenuSupport]
+hash = "sha1-f32d5a3b17e614297417cc279a7ec1cd02274d65"
+other = "支持"
+
+[MessageFormDelete]
+hash = "sha1-df39a3f9dbd02e0b603c545752a5cf0e767d8ea9"
+other = "删除"
+
+[MessageFrom]
+hash = "sha1-3f66052a107eaf9bae7cad0f61fb462f47ec2c47"
+other = "发件人"
+
+[MessageReceived]
+hash = "sha1-27548c4fc95d7c7fdabb7df9f94a1e05cc1d7cb7"
+other = "接收时间"
+
+[MessageStatus]
+hash = "sha1-bae7d5be70820ed56467bd9a63744e23b47bd711"
+other = "状态"
+
+[MessageStatusNew]
+hash = "sha1-66aabd91fc41cc4635aad94dc77d93a0e2eac67b"
+other = "新"
+
+[MessageStatusRead]
+hash = "sha1-852b438f91ad9eb2cdd84419a675a216d543c687"
+other = "已读"
+
+[MessageSubject]
+hash = "sha1-8d183dbdcea3b29906090bd83fa6fa37923cc8ec"
+other = "主题"
+
+[MessagesFormDeleteSelected]
+hash = "sha1-76bf56ab14044667c152353086e0cb89f31f6761"
+other = "删除选择"
+
+[MessagesSummary]
+hash = "sha1-3eeda6d403156e70ae89b84574cc731c15e0ba95"
+other = "您收到的私信列表"
+
+[MessagesTitle]
+hash = "sha1-e5204fc48e8ac1f01ba1f391a69aa88ba367d672"
+other = "私信"
+
+[MsgAddLinkSuccess]
+hash = "sha1-6a0a25a5ae7f58e26527c3aafff4d46dfa6d5669"
+other = "Successfully added link"
+
+[MsgCreateFeedSuccess]
+hash = "sha1-4e8b98f5645e7df81e37b92b428bba8b8cc6b9b1"
+other = "Successfully created feed: {{ .Feed }}"
+
+[MsgDeleteAccountSuccess]
+hash = "sha1-ccbff76316ef62fbbfc9257e5ca8e6c69401175c"
+other = "删除账号成功"
+
+[MsgDeleteFeedSuccess]
+hash = "sha1-9075948e33bebcc514e6618482fa388e6dd2deb5"
+other = "Successfully deleted feed"
+
+[MsgDeleteTokenSuccess]
+hash = "sha1-065262182c05fd1ffe90891963591d5589fc1581"
+other = "删除令牌成功"
+
+[MsgFollowUserSuccess]
+hash = "sha1-5cac17a7344672f66f14219841a24ee488660b17"
+other = "Successfully started following {{ .URI }}"
+
+[MsgMagicLinkAuthEmailSent]
+hash = "sha1-b3f9887f14808e930bf1a84be7ede4ffce5c8bc7"
+other = "Successfully sent password-less login email"
+
+[MsgMessagesSuccessfullySent]
+hash = "sha1-03a2ed9b9721a9755729b829c7623cfa4a9c0586"
+other = "私信已成功发送"
+
+[MsgPasswordResetSuccess]
+hash = "sha1-b4fa66ed409a0c041047c893c4359da1bb5ad8b7"
+other = "密码重置成功"
+
+[MsgRemoveLinkSuccess]
+hash = "sha1-c50929ee55b955fed357699e2c89c2decc45fda6"
+other = "Successfully removed link"
+
+[MsgTransferFeedSuccess]
+hash = "sha1-562fb7a829c098116e4f3e5eedea209998209fd9"
+other = "改变 Feed 所有者成功"
+
+[MsgUnfollowSuccess]
+hash = "sha1-e4fd3a2491a952f0d4dc235d1dcb885be44fff39"
+other = "Successfully stopped following {{ .Nick }}: {{ .URL }}"
+
+[MsgUpdateFeedSuccess]
+hash = "sha1-66f1077cea3b2c7b753c549d65d17a1627f70d59"
+other = "更新 Feed 成功"
+
+[MsgUpdateSettingsSuccess]
+hash = "sha1-2d15d8d21abf06dce5cbabec0cf63139ff64c3da"
+other = "更新设置成功"
+
+[MsgUserRecoveryRequestSent]
+hash = "sha1-a3b2c11ab0b4c328326d2f3e629f52543d4eb230"
+other = "账号恢复请求已发送！请查收邮件并按说明操作"
+
+[MutedLinkTitle]
+hash = "sha1-b9e78ced88a4641f8289a36049516182b46cf836"
+other = "Muted"
+
+[MutedListEmpty]
+hash = "sha1-9f27cee950e7706c88d5794d4c2c37dc0df64be9"
+other = "No muted feeds or twts"
+
+[MutedSummary]
+hash = "sha1-2f33216832429a7e6a4096810d30bd69739b8b3d"
+other = "Manage your list of muted feeds and twts"
+
+[MutedTitle]
+hash = "sha1-5676c5efddc9def1ccc551c636da39b379b7589a"
+other = "Muted Feeds and Twts"
+
+[NavDiscover]
+hash = "sha1-4827ea22716a74aaf8bbe499fc314bb93f73c65e"
+other = "发现"
+
+[NavFeeds]
+hash = "sha1-ffe8e99492ee9b850395d53f6c519938952fde0d"
+other = "Feeds"
+
+[NavFollow]
+hash = "sha1-66587a7a62a90fc91c4c88f1872bedaa52d23a35"
+other = "关注"
+
+[NavJoin]
+hash = "sha1-e0d73143de80d17e82de2e017ac156ca3b9c4e01"
+other = "Join"
+
+[NavLists]
+hash = "sha1-57c9502a7d7d48fd4a86b45fefb2b163491c3ae1"
+other = "Lists"
+
+[NavLogin]
+hash = "sha1-4e5a2893bdcc7d239c1db72e4c4ffbe4bea73174"
+other = "登录"
+
+[NavLogout]
+hash = "sha1-e43d612e11f1568f2373e719d4c4b08dcecdc7cc"
+other = "退出"
+
+[NavLogoutConfirm]
+hash = "sha1-97c2c650a605574ebc54b481dac6f346ded5da79"
+other = "Are you sure you want to log out?"
+
+[NavMentions]
+hash = "sha1-85e12bc6f2e56024e47cc826a14968247a52dc54"
+other = "提及"
+
+[NavMessages]
+hash = "sha1-f1702b4686278becffc88baabe6f4b7a8355532c"
+other = "私信"
+
+[NavOrigin]
+hash = "sha1-33a35153d6e17e76c77daee66b805792d3627a68"
+other = "Origin (default)"
+
+[NavRegister]
+hash = "sha1-d672995a14650d0e018026b64f297663d8c71c8d"
+other = "注册"
+
+[NavSettings]
+hash = "sha1-c7f73bb54d928922c3838bb789ee9fb8a5b1eb37"
+other = "设置"
+
+[NavTimeline]
+hash = "sha1-018514a3d58aa08353dd5e387ee29de45981c409"
+other = "动态"
+
+[NoTwts]
+hash = "sha1-5b57a49ebae0d4b1b458af42b9ed71896504614b"
+other = "还没有内容... 稍候再来！"
+
+[PageDiscoverTitle]
+hash = "sha1-4827ea22716a74aaf8bbe499fc314bb93f73c65e"
+other = "发现"
+
+[PageExternalFollowingTitle]
+hash = "sha1-88e71a5e3d7dc4362e87f92a2cdcfa4905d395a5"
+other = "{{ .DomainNick }} 正在关注"
+
+[PageExternalProfileTitle]
+hash = "sha1-25e3a2cdf4c61d76ed548ad52ed0085498dd3b74"
+other = "External profile for @<{{ .Nick }} {{ .URL }}>"
+
+[PageFeedsTitle]
+hash = "sha1-ffe8e99492ee9b850395d53f6c519938952fde0d"
+other = "Feeds"
+
+[PageFollowTitle]
+hash = "sha1-c3954605089b8a03bc74ad154731981fe88eb87e"
+other = "关注"
+
+[PageListsTitle]
+hash = "sha1-57c9502a7d7d48fd4a86b45fefb2b163491c3ae1"
+other = "Lists"
+
+[PageLocalTimelineTitle]
+hash = "sha1-c69cd8d5a9c8ce344bc8d779a0b8a2710ebca482"
+other = "本地动态"
+
+[PageManageFeedTitle]
+hash = "sha1-1b31888a297e82f551164a1dafade1decdfc1d45"
+other = "Manage feed {{ .Feed }}"
+
+[PageMentionsTitle]
+hash = "sha1-85e12bc6f2e56024e47cc826a14968247a52dc54"
+other = "提及"
+
+[PageMessagesTitle]
+hash = "sha1-e5204fc48e8ac1f01ba1f391a69aa88ba367d672"
+other = "私信"
+
+[PageNotFoundTitle]
+hash = "sha1-e637d9faea1e24d9196c254461fefa8d2932e5a1"
+other = "页面没有找到"
+
+[PageResetPasswordTitle]
+hash = "sha1-5c4bc97ee5d0ac344829dbcef02d7302feb098a8"
+other = "重置密码"
+
+[PageSettingsTitle]
+hash = "sha1-c7f73bb54d928922c3838bb789ee9fb8a5b1eb37"
+other = "设置"
+
+[PageSupportTitle]
+hash = "sha1-2b658ffd9420a73ab8def21ea11ec05a7927cf2c"
+other = "支持"
+
+[PageUserBookmarksTitle]
+hash = "sha1-fe5306fcab6e2462cd300af297cfc264a0b8ff48"
+other = "Bookmarked twts for {{ .Username }}"
+
+[PageUserFollowersTitle]
+hash = "sha1-4f19dba3580d1f3ddcd3f45cc44739aa1f354071"
+other = "Users following {{ .Username }}"
+
+[PageUserFollowingTitle]
+hash = "sha1-99c933faeddfcfedb18aeffa7bde278447b6c8cd"
+other = "Users followed by {{ .Username }}"
+
+[PageUserTimelineTitle]
+hash = "sha1-018514a3d58aa08353dd5e387ee29de45981c409"
+other = "动态"
+
+[PagerNextLinkTitle]
+hash = "sha1-bc981983e7f547dc62e19a1e383acfe00782a6d5"
+other = "下一页"
+
+[PagerNoNextTooltip]
+hash = "sha1-b068268b48718d1fc90aacd1f40498095a712532"
+other = "没有了"
+
+[PagerNoPreviousTooltip]
+hash = "sha1-3866fcde85eda2bbcb7be0aaa8507477286fe238"
+other = "没有了"
+
+[PagerPrevLinkTitle]
+hash = "sha1-e96fea52df5eb0d7ea088eb0523f5fd6be20645f"
+other = "上一页"
+
+[PagerTwtsSummary]
+hash = "sha1-9e6b15e93c90719d3bc88054cc839c6c8cb5ef1d"
+other = "第 {{ .Page }}/{{ .PageNums }} 页，总计 {{ .Nums }} 条推文"
+
+[PermalinkNothingFound]
+hash = "sha1-209ebf67d029ae59dd4df17ff417a84f2e0cb440"
+other = "<p>Nothing to see here. <a href=\"?unfiltered=1\">View Unfiltered</a></p>"
+
+[ProfileAtomLinkTitle]
+hash = "sha1-41dded417052424bdcf3c39f6c8664147fae6806"
+other = "Atom"
+
+[ProfileBookmarksLinkTitle]
+hash = "sha1-ca3cddd25bd8f6bc4ce35a262e2e1398541ecf3d"
+other = "Bookmarks"
+
+[ProfileConfigLinkTitle]
+hash = "sha1-8851142da56fd885ce668a165b33fee7003e858d"
+other = "配置"
+
+[ProfileFollowersLinkTitle]
+hash = "sha1-78eaabf4a629795fe52f523f44f5000c6b204f2f"
+other = "Followers"
+
+[ProfileFollowingLinkTitle]
+hash = "sha1-90eeb100838048513e8d2290a6892e18077c24f6"
+other = "Following"
+
+[ProfileFollowsYou]
+hash = "sha1-9c3afad24345228d89b18f923e7212b2e4cc266b"
+other = "关注了你"
+
+[ProfileInfo]
+hash = "sha1-9486a1afca121ed3afba4b9aaef1d564acff2b5a"
+other = "User Info"
+
+[ProfileIsMuted]
+hash = "sha1-0205164b6c8b0be8d684aa988661df6d9b907b3c"
+other = "User currently muted"
+
+[ProfileLastPosted]
+hash = "sha1-145272e3d7b81f889df87206a429da750890c4ed"
+other = "last posted"
+
+[ProfileLastSeen]
+hash = "sha1-56462f81b82a2d76b46ff441b40d364b6505f1d8"
+other = "Last seen"
+
+[ProfileLinks]
+hash = "sha1-96348083f320cb5fc4ea1736274b4072f6277689"
+other = "User Links"
+
+[ProfileMayNotFollowYou]
+hash = "sha1-3e9436055805b0093be35787f9ed73099eec0ad0"
+other = "may not follow you"
+
+[ProfileMuteLinkTitle]
+hash = "sha1-0f0973483d912464153b3be374a94b58e6cd0ef6"
+other = "禁言"
+
+[ProfileMuteUser]
+hash = "sha1-30772b5b5cde04fdc46e43460d1b7096cb8a2601"
+other = "You are free to Unfollow or Mute this user or feed.&#10;Muting will also remove that user/feed's content from your view.&#10;You will no longer see content from that user/feed anywhere."
+
+[ProfileNoDescription]
+hash = "sha1-fe3f10ae47cf6f826ac900b3c510bfe6745352da"
+other = "No description provided."
+
+[ProfileNoTwts]
+hash = "sha1-92629eb8ece32dd6217b417b1274d2f4073d1ca3"
+other = "Try checking out the <a href=\"/discover\">{{ .NavDiscover }}</a> to see what's happenning on the {{ .InstanceName }} pod or <a href=\"/follow\">{{ .NavFollow }}</a> a feed"
+
+[ProfileReportLinkTitle]
+hash = "sha1-ee45c30326b750387589752c0f75e1dd87ddc7e4"
+other = "报告"
+
+[ProfileReportUser]
+hash = "sha1-8ea1aab3d7221d789f3a6b80ef950d80b6ccb65b"
+other = "If this user/feed is violating this Pod's ({{ .InstanceName }})&#10;community guidelines as set out in the Abuse Policy,&#10;please report them immediately!"
+
+[ProfileToolTitle]
+hash = "sha1-503b2943687edb378c72d1ed3b4bd9508399a80c"
+other = "Mute / Report User"
+
+[ProfileTwtxtLinkTitle]
+hash = "sha1-45c9437b0fb70f8f31804a3d49137e3bec03d99d"
+other = "Twtxt"
+
+[ProfileUnmuteLinkTitle]
+hash = "sha1-7044c3104095ed2673eb6a7d23cb1bb27847b930"
+other = "取消禁言"
+
+[RegisterFormEmailAddress]
+hash = "sha1-c94d3175a6560565410511df2cebab9cda96027e"
+other = "Email address"
+
+[RegisterFormEmailAddressHelp]
+hash = "sha1-23981a618071eb29138b4d57799ec37b10ca1884"
+other = "Note that we do not actually store your email address. We store a hash, called a recovery hash. This is used for password resets and account recovery so if you forget or lose access to your Email account provided here, it will be impossible to recover your account!"
+
+[RegisterFormGuidelines]
+hash = "sha1-09f2d7efb99d67b64c2193d184c5bc760bc8c412"
+other = "I agree to abide by the <a href='/abuse'>Community Guidelines</a>."
+
+[RegisterFormLogin]
+hash = "sha1-8cc61755932c795b961af3625f92b8a3a9d7e5c3"
+other = "已有账号? <a href='/login'>/登录</a> "
+
+[RegisterFormPassword]
+hash = "sha1-8be3c943b1609fffbfc51aad666d0a04adf83c9d"
+other = "密码"
+
+[RegisterFormPooh]
+hash = "sha1-0c1f00e2d5295803293b8a739afd6053a24c764b"
+other = "Please leave this field blank"
+
+[RegisterFormRegister]
+hash = "sha1-d672995a14650d0e018026b64f297663d8c71c8d"
+other = "注册"
+
+[RegisterFormUsername]
+hash = "sha1-84c29015de33e5d22422382a372caba5c58f8c01"
+other = "用户名"
+
+[RegisterHowToContent]
+hash = "sha1-bf7ac2573fa5f1f64036e8f2d301aab10bbf8d83"
+other = "<p>\nYou are about to create a new <a href='https://yarn.social' target='_blank'>Yarn.social</a>\naccount on {{ .InstanceName }}\n</p>\n<p>\nBy registering an account on {{ .InstanceName }} you agree to abide\nby the Community Guidelines set out in the <a href='/abuse'>Abuse Policy</a>.\n</p>\n<p>\n<ul>\n<li>Pick a username</li>\n<li>Create a unique and secure password</li>\n<li>Enter your email address in case you forget your password</li>\n</ul>\n</p>\n<p>\nPick any username you like (<i>as long as it is available on {{ .InstanceName }}</i>).\n</p>\n<p>\nPlease note we <strong>DO NOT</strong> actually store your email address at all!\nIf you forget your email address or lose access to your email we are\nreally sorry but you will be unable to recover your account if you\nforget your password.\n</p>"
+
+[RegisterHowToSummary]
+hash = "sha1-c3fb98ef5c0ae7a410e0207f71fb54119203d293"
+other = "Quick quide to help you create an account"
+
+[RegisterHowToTitle]
+hash = "sha1-3f4f547d73646d774e8f690b36333e8c9572894b"
+other = "Create an account"
+
+[RegisterLinkTitle]
+hash = "sha1-5b402e3dfa8bfeaa6620b1ee5bf38fb965bcbe3c"
+other = "注册"
+
+[RegisterSummary]
+hash = "sha1-3776e729bcd9ac3844df66c792d7311a92b3456f"
+other = "Create and register a new Yarn.social account on {{ .InstanceName }}"
+
+[RegisterTitle]
+hash = "sha1-0b81497c8589af2714a1ddbeb62b3a4be679c318"
+other = "注册"
+
+[ResetPasswordFormEmail]
+hash = "sha1-c94d3175a6560565410511df2cebab9cda96027e"
+other = "电子邮件"
+
+[ResetPasswordFormPassword]
+hash = "sha1-8be3c943b1609fffbfc51aad666d0a04adf83c9d"
+other = "Password"
+
+[ResetPasswordFormReset]
+hash = "sha1-3fb75e3bfe4de94eb5198656fa9de95352dab915"
+other = "重置密码"
+
+[ResetPasswordFormResetSummary]
+hash = "sha1-7bec90ce73f655b251d7bb9e865d9bcf2dce6156"
+other = "Enter your new password"
+
+[ResetPasswordFormUsername]
+hash = "sha1-84c29015de33e5d22422382a372caba5c58f8c01"
+other = "用户名"
+
+[ResetPasswordHowToContent]
+hash = "sha1-dbe6de7dc0b9401529524364c060a7af13367ce9"
+other = " \n<p>\nUse the form on the left to recover your account and reset your\npassword. Simply fill in the username and email address you used\nto create your account.\n</p>\n<p>\nBe aware however that you must supply the same email address\nhere that you used to create your account in the first place.\nWe <strong>DO NOT</strong> actually store your email address on file so\nif you do not have access to or have forgotten your email address\nthen you will be unable to recover your account.\n</p>"
+
+[ResetPasswordHowToTitle]
+hash = "sha1-8b19f439204c9f765b9d0ddc81459d9dff6e5a1b"
+other = "如何重置您的密码"
+
+[ResetPasswordLinkTitle]
+hash = "sha1-19dda05128bca657bda59fd4ada178cc349f00ec"
+other = "忘记密码"
+
+[ResetPasswordSummary]
+hash = "sha1-f4c4fc1a4556f29189ff762b92fc4107b48f900f"
+other = "填写下面表单重置您的密码"
+
+[ResetPasswordTitle]
+hash = "sha1-3fb75e3bfe4de94eb5198656fa9de95352dab915"
+other = "重置密码"
+
+[SearchSummary]
+hash = "sha1-8969afc3b960ccdb43afff65d3e087bd74db5eb1"
+other = "Twts matching {{ .SearchQuery }}"
+
+[SearchTitle]
+hash = "sha1-83512f3d83b2a10db88ec1c9be156d8d097c6172"
+other = "Searching {{ .InstanceName }}"
+
+[SettingsDeleteAccountFormDelete]
+hash = "sha1-f6fdbe48dc54dd86f63097a03bd24094dedd713a"
+other = "删除"
+
+[SettingsDeleteAccountSummary]
+hash = "sha1-717b43e3a25a8e80ab5653d3eb0fdd92f1f89c28"
+other = "<b>WARNING:</b> This is permanent and cannot be undone!"
+
+[SettingsDeleteAccountTitle]
+hash = "sha1-1753c2061c676db8dd89101b51b92f09a277f51c"
+other = "删除账号"
+
+[SettingsFormChangeAvatarTitle]
+hash = "sha1-e8d33553f61394cb4675e07f4b05e5735a734b93"
+other = "Change Avatar"
+
+[SettingsFormChangeEmail]
+hash = "sha1-dbc7f1cb535bc000b0f2b463b6b1552763dcf66a"
+other = "更新电子邮件"
+
+[SettingsFormChangeEmailSummary]
+hash = "sha1-a4fd59d92d991511b1637d390ec59af9e9ff34d6"
+other = "We DO NOT actually store this! If you forget or lose access to your Email account provided here, it will be impossible to recover your Yarn.social account!"
+
+[SettingsFormChangeEmailTitle]
+hash = "sha1-12dffac0dc7d052b70b16ef9b915ec1e62f92c45"
+other = "Change Email"
+
+[SettingsFormChangePassword]
+hash = "sha1-148a65a983e878a68d6a62f2a066789fb82df14a"
+other = "更新密码"
+
+[SettingsFormChangePasswordTitle]
+hash = "sha1-49289db43e663a3df5e2c70714722ecc54895565"
+other = "Change Password"
+
+[SettingsFormChangeTagline]
+hash = "sha1-deb480b650f5f6b9a15caf70fa2e57a95f7200d4"
+other = "A short description, catchphrase, or slogan about yourself"
+
+[SettingsFormChangeTaglineTitle]
+hash = "sha1-fce038d40061fbf85fd68ef534dc15e3bdbc2639"
+other = "Update Tagline"
+
+[SettingsFormDisplayImagesPreferenceGallery]
+hash = "sha1-9c30a3485a5887f1ba5abd2a291d304a01863e55"
+other = "Gallery"
+
+[SettingsFormDisplayImagesPreferenceInline]
+hash = "sha1-526541172435aecfc742e92a92c1cb66d9c303da"
+other = "Inline (default)"
+
+[SettingsFormDisplayImagesPreferenceLightbox]
+hash = "sha1-99f6a030c5134d53253c7442cb05c1be14229565"
+other = "Lightbox"
+
+[SettingsFormDisplayImagesPreferenceTitle]
+hash = "sha1-e51d60bd693b10dc7da750381a02d6b90846057a"
+other = "Display Images As"
+
+[SettingsFormFrontPageAll]
+hash = "sha1-563dcd61f244e3684535aa54fdd574be7a642a59"
+other = "all posts in cache"
+
+[SettingsFormFrontPageCompact]
+hash = "sha1-131eaff050e1a872b2036d0c575c204161bb9a70"
+other = "only one post per feed"
+
+[SettingsFormFrontPageLocal]
+hash = "sha1-06c500968fa079d987f1672b5714d790def29211"
+other = "local posts only"
+
+[SettingsFormFrontPageTitle]
+hash = "sha1-29fbad2d5dd4550f50d7eb29b5a5722230ca653e"
+other = "Front page displays"
+
+[SettingsFormOpenLinksInPreferenceNewWindow]
+hash = "sha1-b1a8bf37d9ca8643193b898991289deb3b77bcf9"
+other = "New window (default)"
+
+[SettingsFormOpenLinksInPreferenceSameWindow]
+hash = "sha1-2b605fa62584f3f5e2df36fa839a6cf01268d1a9"
+other = "Same window"
+
+[SettingsFormOpenLinksInPreferenceTitle]
+hash = "sha1-48581bb767f6f2cc2af98759ce9b6a3734c4d228"
+other = "Open Links In"
+
+[SettingsFormPrivacySettingsShowBookmarks]
+hash = "sha1-85f2f3c4327bfaba4df1a06109ba94535d647f91"
+other = "公开书签"
+
+[SettingsFormPrivacySettingsShowFollowers]
+hash = "sha1-473c3d2fe3b52ccf0c666649386ad4d7b678cb26"
+other = "公开粉丝"
+
+[SettingsFormPrivacySettingsShowFollowings]
+hash = "sha1-ede3207e5e77027a6c6276678af39f9a9c8f409f"
+other = "公开关注"
+
+[SettingsFormPrivacySettingsTitle]
+hash = "sha1-af95411fcc562c72d8401d289430eccb5aa057b9"
+other = "Privacy Settings"
+
+[SettingsFormStartPageTitle]
+hash = "sha1-577bf05f4e03c0dd62291e242fe6d623e61c30b1"
+other = "Start Page"
+
+[SettingsFormStartPageTitleHelp]
+hash = "sha1-ef42ebc4ddc61de4b6bd872fde6c78e978617f8d"
+other = "Choosing <strong>Origin</strong> will take you back to the page before login."
+
+[SettingsFormThemeTitle]
+hash = "sha1-a797e30923ac1be590300ce6b08e63b4e6dc6688"
+other = "Theme"
+
+[SettingsFormTimePreferenceTitle]
+hash = "sha1-2dd59fb7f2003295add3420b5b6666037deecd42"
+other = "Display Time In"
+
+[SettingsFormTimelinePreferenceFlat]
+hash = "sha1-df9ab5272730acc2c431d735f894f40544cc278c"
+other = "Flat (hide replies)"
+
+[SettingsFormTimelinePreferenceList]
+hash = "sha1-4594096bd023df50dcaf509208f80ca0fabb9cd7"
+other = "List (default)"
+
+[SettingsFormTimelinePreferenceTitle]
+hash = "sha1-018514a3d58aa08353dd5e387ee29de45981c409"
+other = "Timeline"
+
+[SettingsFormTimezoneTitle]
+hash = "sha1-9ccde74eff12ffe9d4644302891ba5626a4a17d6"
+other = "Display Dates In Timezone"
+
+[SettingsFormUpdate]
+hash = "sha1-fb91e24fa52d8d2b32937bf04d843f730319a902"
+other = "更新"
+
+[SettingsFormViewProfile]
+hash = "sha1-b98795a246f09961ab85071a7f50013203007e9f"
+other = "查看用户详情"
+
+[SettingsInfoMissingTagline]
+hash = "sha1-fe3f10ae47cf6f826ac900b3c510bfe6745352da"
+other = "No description provided."
+
+[SettingsInfoUserInfo]
+hash = "sha1-9486a1afca121ed3afba4b9aaef1d564acff2b5a"
+other = "User Info"
+
+[SettingsInfoUserLinks]
+hash = "sha1-96348083f320cb5fc4ea1736274b4072f6277689"
+other = "User Links"
+
+[SettingsPodManagementTitle]
+hash = "sha1-9a2d74e99197deb098f491ce7fc19ecca9a7c1b1"
+other = "Pod 管理"
+
+[SettingsSummary]
+hash = "sha1-66c5325c25f10fdc5451819a3a2cdca81f5a2f01"
+other = "在此处更新您的帐户设置和密码"
+
+[SettingsTitle]
+hash = "sha1-82cf8a5fc7ac9479f022ea7797d2fc24455ab4ee"
+other = "账号设置"
+
+[SettingsToolsShareLinkTitle]
+hash = "sha1-2f32378fe42c2a6698ea998a3e0289abd1a0c371"
+other = "通过 {{ .InstanceName }} 分享"
+
+[SettingsToolsSummary]
+hash = "sha1-3a4cf32e61bfacef5a524e53c2c5a824f3e997d9"
+other = "<strong>书签：</strong>您可以通过将以下书签添加到浏览器书签栏中来共享您在浏览器中所在网站的链接。\n下次您想共享链接时，只需单击“通过 {{ .InstanceName }} 分享”按钮即可。\n只需将下面的按钮拖放到您的浏览器书签栏中即可！\n"
+
+[SettingsToolsTitle]
+hash = "sha1-4fa8cc860c52b268dc6a3adcde7305e9415db5bb"
+other = "工具"
+
+[SettingsTwtCompact]
+hash = "sha1-fd2dd04bba8ecc916a7824bc4ed1994c729ab28b"
+other = "Compact View"
+
+[SettingsTwtCustomColorHelp]
+hash = "sha1-7d07af8c81ccd04c9231fc8385279dffd95753d6"
+other = "Type in either the literal name of the colour or hex code you want to use, i.e. <code>orange</code> or <code>#ff8c00</code> <em>(make sure to include the # for the hex code)</em><br>A list of interesting colors can be found here: <a href='https://www.w3schools.com/colors/colors_groups.asp' target='_blank'>https://www.w3schools.com/colors/colors_groups.asp</a>"
+
+[SettingsTwtCustomColorPrimary]
+hash = "sha1-db1f3745e1f8b469d71cfc5b09c3a2a48d835d45"
+other = "Custom Primary Color"
+
+[SettingsTwtCustomColorReset]
+hash = "sha1-95edea4f499af09af280d6b9fc08ba0f5bbc0371"
+other = "Leave blank to clear"
+
+[SettingsTwtCustomColorSecondary]
+hash = "sha1-15347059f8fc120c575dd2c5a9d9595f24565493"
+other = "Custom Secondary Color"
+
+[SettingsTwtLinkVerification]
+hash = "sha1-14d432aea790bc01e64fadd2a974a0343477bf66"
+other = "Link Verification"
+
+[SettingsTwtReadmore]
+hash = "sha1-8cc343cc97d1c6b44fb48a756acc33ed7ddd2151"
+other = "Collapse Content"
+
+[SettingsTwtReadmoreHelp]
+hash = "sha1-92f330412f3d5b5797e11408f6bd6a6c2e5cac31"
+other = "Adds a 'Read More' section to longer content.<br><strong>Javascript is required</strong>"
+
+[SettingsTwtStripTrackingParam]
+hash = "sha1-5d6c1723e5f5208285cf52693a564bb1c66946a9"
+other = "Strip Link Parameters"
+
+[SettingsTwtStripTrackingParamHelp]
+hash = "sha1-78d44b0d6bdac2fe2c02e6764bb83e3754191b62"
+other = "This removes third party tracking from posted URLs<br>Query parameters will be removed from URLs such as; utm_, sc_, fb_"
+
+[SettingsTwtTitle]
+hash = "sha1-1596bf6271ab348f04a599625045a31278048c86"
+other = "Twt Preferences"
+
+[SuccessTitle]
+hash = "sha1-42a8f651d79fd005eeac0612df6442b983a01184"
+other = "成功"
+
+[SupportCaptchaSummary]
+hash = "sha1-88758c3aef244e41de7bf377918be88a1cc2a881"
+other = "请输入验证码，让我们知道您不是一个机器人！"
+
+[SupportFormCaptcha]
+hash = "sha1-e9312bd1b14ea0402dd548180b030e6c19d7c452"
+other = "验证码"
+
+[SupportFormEmail]
+hash = "sha1-c94d3175a6560565410511df2cebab9cda96027e"
+other = "电子邮件"
+
+[SupportFormMessage]
+hash = "sha1-68f4145fee7dde76afceb910165924ad14cf0d00"
+other = "内容"
+
+[SupportFormName]
+hash = "sha1-709a23220f2c3d64d1e1d6d18c4d5280f8d82fca"
+other = "名字"
+
+[SupportFormSubject]
+hash = "sha1-8d183dbdcea3b29906090bd83fa6fa37923cc8ec"
+other = "标题"
+
+[SupportFormSubmit]
+hash = "sha1-2dacf65959849884a011f36f76a04eebea94c5ea"
+other = "提交"
+
+[SupportSummary]
+hash = "sha1-339139a85743fd3ba78316ad7db894e4307b6f0c"
+other = "需要我们的帮助吗？"
+
+[SupportTitle]
+hash = "sha1-4832e45812a2724f16a15f9ae87adfc8ae4168cf"
+other = "联系我们"
+
+[ThemeAmoled]
+hash = "sha1-dfe418c4632c130e377ee3d2c752c9fd7fba6c5b"
+other = "Amoled"
+
+[ThemeAuto]
+hash = "sha1-c614ba7c453cdcd4d21b20e8286c6266c891e0c6"
+other = "自动"
+
+[ThemeDark]
+hash = "sha1-e07e620053b9115e655210eb1516900b75e280e9"
+other = "SimpleCSS Dark"
+
+[ThemeDarkClassic]
+hash = "sha1-aa049ec36cbadac378bcfd759c534a820c60ba0a"
+other = "Yarn.social Dark"
+
+[ThemeLight]
+hash = "sha1-409334da614f71c04636dc8b72b025ffecf25b96"
+other = "SimpleCSS Light"
+
+[ThemeLightClassic]
+hash = "sha1-d2b3b0a0dd7776b5e7c34513c1e6e35f3b432cd3"
+other = "Yarn.social Light"
+
+[ToolbarButtonBlockquote]
+hash = "sha1-4362c13406d51b403bf98c9eb4c21bbe87e3bc34"
+other = "Blockquote"
+
+[ToolbarButtonBold]
+hash = "sha1-19e07430eed6d97d6d73cb4a2967b1f316520f54"
+other = "Bold"
+
+[ToolbarButtonCode]
+hash = "sha1-adac69379a626c2436948a4ef1792c7d719ef929"
+other = "Code"
+
+[ToolbarButtonImage]
+hash = "sha1-e33ff771df08f325351684b81006ca4c0098f190"
+other = "Image Link"
+
+[ToolbarButtonItalic]
+hash = "sha1-3b9b0722d0d43e4d14ff92cca723a64b8e24e4f0"
+other = "Italics"
+
+[ToolbarButtonLink]
+hash = "sha1-35953e1185b465b38f47753e1ee7263aba96436a"
+other = "URL Link"
+
+[ToolbarButtonMedia]
+hash = "sha1-7718b73ae92054eb6f20367e99bd542db90ba3ef"
+other = "Upload Media"
+
+[ToolbarButtonMention]
+hash = "sha1-5125802181632dd0c88305491076bea9fda85d39"
+other = "Mention"
+
+[ToolbarButtonStrikethrough]
+hash = "sha1-a93b9a6808a95ca93515164188159659017155cb"
+other = "Strikethrough"
+
+[TransferFeedFormConfirm]
+hash = "sha1-1d1a2a5ca176b94b13d6393b44db100201c5cd98"
+other = "你确定要将 Feed 转移到这个用户？此操作无法撤消！"
+
+[TransferFeedFormTransfer]
+hash = "sha1-0be45ddfb8c117f4bf1cfa53fb32a4129c92a158"
+other = "转移"
+
+[TransferFeedSummary]
+hash = "sha1-3b05176c6fb7011e266360a2f600131a5fa8a7cd"
+other = "变更 Feed 所有者"
+
+[TransferFeedTitle]
+hash = "sha1-4e53af8290e2777a78e62676813bdf64e62940b9"
+other = "Feed 转移"
+
+[TransferFeedWarning]
+hash = "sha1-717b43e3a25a8e80ab5653d3eb0fdd92f1f89c28"
+other = "<b>WARNING:</b> This is permanent and cannot be undone!"
+
+[TransferUserFeedSummary]
+hash = "sha1-82a625ec39852607779e48c250bbc3b9a1afa838"
+other = "改变 <b>{{ .Username }}</b> 所有者"
+
+[TwtConversationLinkTitle]
+hash = "sha1-4de67a4d313139fb2f1d0ad9d2c13d0921ddb131"
+other = "紗"
+
+[TwtDeleteConfirm]
+hash = "sha1-5a1cea1ad98d84fb77447b5c93ae8914d0862fdf"
+other = "Are you sure you want to delete this Twt?"
+
+[TwtDeleteLinkTitle]
+hash = "sha1-f6fdbe48dc54dd86f63097a03bd24094dedd713a"
+other = "删除"
+
+[TwtEditLinkTitle]
+hash = "sha1-5301648dcf6b53cefc9ed52999aaa92d4603cae0"
+other = "编辑"
+
+[TwtForkLinkTitle]
+hash = "sha1-471121e27a3e0f2a208ec3e9a0b109102268a22f"
+other = "叉"
+
+[TwtFormPost]
+hash = "sha1-7858ac3ff63354f37161bd349efe11edd13b89cb"
+other = "发表"
+
+[TwtFormSave]
+hash = "sha1-efc007a393f66cdb14d57d385822a3d9e36ef873"
+other = "保存"
+
+[TwtFormTitle]
+hash = "sha1-768e0c1c69573fb588f61f1308a015c11468e05f"
+other = "标题"
+
+[TwtMute]
+hash = "sha1-203f6d112001097875a993a5fb6d97ddc6fa3916"
+other = "Mute Twt"
+
+[TwtReadLess]
+hash = "sha1-b64a80b45c6536d87213c530639e606e6b3b2368"
+other = "⤊ Read Less"
+
+[TwtReadMore]
+hash = "sha1-3cd30b88aa928be52c30cdba5c0499429ba65c83"
+other = "⤋ Read More"
+
+[TwtReplyLinkTitle]
+hash = "sha1-6c2bb735a46a8ff307fe2e638d581295b2a49e09"
+other = "回复"
+
+[TwtUnmute]
+hash = "sha1-2a240200d1965be765e7baf15d948a2b28725d9a"
+other = "Unmute Twt"
+
+[UnfollowLinkTitle]
+hash = "sha1-e3a6fe565c7f64204f2dd182dc8b8ca9fe725d99"
+other = "取消关注"
+
+[filterTitle_nobots]
+hash = "sha1-5d060ddf4fbef919b11e2330170bd6c606658c07"
+other = "Exclude Bots"

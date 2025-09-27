@@ -1,0 +1,3 @@
+{{ define "content" }}
+  {{ template "bookmark" (dict "User" $.User "Twt" ( $.Twts | first) "Ctx" .) }}
+{{ end }}

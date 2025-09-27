@@ -1,0 +1,291 @@
+/*!
+ * Tabler Icons 1.47.0 by tabler - https://tabler.io
+ * License - https://github.com/tabler/tabler-icons/blob/master/LICENSE
+ * Custom Icon Set - Last Updated: 14 Jan. 2022
+ */
+@font-face {
+  font-family: "tabler-icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url("tabler-icons.woff") format("woff")
+}
+
+.ti {
+  font-family: "tabler-icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ti-affiliate:before {
+  content: '\edff';
+}
+
+.ti-bell-ringing:before {
+  content: "\ed07";
+}
+
+.ti-bold:before {
+  content: "\eb7b";
+}
+
+.ti-bookmark:before {
+  content: "\ea3a";
+}
+
+.ti-bookmark-off:before {
+  content: "\eced";
+}
+
+.ti-bookmarks:before {
+  content: "\ed08";
+}
+
+.ti-caret-left:before {
+  content: "\eb5e";
+}
+
+.ti-caret-right:before {
+  content: "\eb5f";
+}
+
+.ti-circle-check:before {
+  content: "\ea67";
+}
+
+.ti-circle-minus:before {
+  content: "\ea68";
+}
+
+.ti-circle-plus:before {
+  content: "\ea69";
+}
+
+.ti-circle-x:before {
+  content: "\ea6a";
+}
+
+.ti-clock:before {
+  content: "\ea70"
+}
+
+.ti-code:before {
+  content: "\ea77";
+}
+
+.ti-compass:before {
+  content: "\ea79";
+}
+
+.ti-device-analytics:before {
+  content: "\ee72";
+}
+
+.ti-device-speaker:before {
+  content: "\ea8b";
+}
+
+.ti-door-enter:before {
+  content: "\ef4c";
+}
+
+.ti-door-exit:before {
+  content: "\ef4d";
+}
+
+.ti-edit:before {
+  content: "\ea98";
+}
+
+.ti-external-link:before {
+  content: "\ea99";
+}
+
+.ti-heartbeat:before {
+  content: '\ef92';
+}
+
+.ti-help:before {
+  content: '\eabf';
+}
+
+.ti-ismuted:before {
+  content: "\eb50";
+}
+
+.ti-italic:before {
+  content: "\eb93";
+}
+
+.ti-link:before {
+  content: "\eade";
+}
+
+.ti-link-profile:before {
+  content: "\eade";
+}
+
+.ti-menu-2:before {
+  content: "\ec42";
+}
+
+.ti-message:before {
+  content: "\eaef";
+}
+
+.ti-message-circle:before {
+  content: "\eaed";
+}
+
+.ti-message-plus:before {
+  content: "\ec9a";
+}
+
+.ti-messages:before {
+  content: "\eb6c";
+}
+
+.ti-moon:before {
+  content: "\eaf8";
+}
+
+.ti-movie:before {
+  content: "\eafa";
+}
+
+.ti-photo:before {
+  content: "\eb0a";
+}
+
+.ti-refresh:before {
+  content: "\eb13";
+}
+
+.ti-rss:before {
+  content: "\eb19";
+}
+
+.ti-rss-nav:before {
+  content: "\eb19";
+}
+
+.ti-rss-profile:before {
+  content: "\eb19";
+}
+
+.ti-send:before {
+  content: "\eb1e";
+}
+
+.ti-settings:before {
+  content: "\eb20";
+}
+
+.ti-settings-nav:before {
+  content: "\eb20";
+}
+
+.ti-shadow:before {
+  content: "\eed8";
+}
+
+.ti-strikethrough:before {
+  content: "\eb9e";
+}
+
+.ti-sun:before {
+  content: "\eb30";
+}
+
+.ti-tool:before {
+  content: "\eb40";
+}
+
+.ti-trash:before {
+  content: "\eb41";
+}
+
+.ti-urgent:before {
+  content: "\eb48";
+}
+
+.ti-upload:before {
+  content: "\eb47";
+}
+
+.ti-user-check:before {
+  content: "\eb49";
+}
+
+.ti-user-circle:before {
+  content: "\ef68";
+}
+
+.ti-user-plus:before {
+  content: "\eb4b";
+}
+
+.ti-users:before {
+  content: "\ebf2";
+}
+
+.ti-volume:before {
+  content: "\eb51";
+}
+
+.ti-volume-3:before {
+  content: "\eb50";
+}
+
+.ti-robot:before {
+  content: "\f00b";
+}
+
+.ti-user:before {
+  content: "\eb4d";
+}
+
+.ti-blockquote:before {
+  content: "\ee09";
+}
+
+.ti-list:before {
+  content: "\eb6b";
+}
+
+.ti-at:before {
+  content: "\e902";
+}
+
+.ti-arrow-back:before {
+  content: "\e900";
+}
+
+.ti-arrow-forward:before {
+  content: "\e901";
+}
+
+.ti-home:before {
+  content: "\e903";
+}
+
+.ti-message-report:before {
+  content: "\e904";
+}
+
+.ti-x:before {
+  content: "\e905";
+}
+
+.ti-user-minus:before {
+  content: "\e906";
+}
+
+.ti-user-x:before {
+  content: "\e907";
+}

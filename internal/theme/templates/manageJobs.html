@@ -1,0 +1,31 @@
+{{ define "content" }}
+  <article>
+    <hgroup>
+      <h2>{{ tr . "ManageJobsTitle" }}</h2>
+      <em>{{ tr . "ManageJobsSummary" }}</em>
+    </hgroup>
+    <div>
+      <table>
+        <tr>
+          <th>{{ tr . "ManageJobsTableName" }}</th>
+          <th>{{ tr . "ManageJobsTableNext" }}</th>
+          <th>{{ tr . "ManageJobsTableLast" }}</th>
+          <th></th>
+        </tr>
+        {{ $ctx:=. }}
+        {{ range $entry := $.Jobs }}
+          <tr>
+            <td>{{ $entry.Job.String }}</td>
+            <td><small>{{ $entry.Next | time }}</small></td>
+            <td><small>{{ $entry.Prev | time }}</small></td>
+            <td><form class="vert-center" action="/manage/jobs" enctype="multipart/form-data" method="POST">
+              <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+              <input type="hidden" name="name" value="{{ $entry.Job.String }}">
+              <button type="submit">{{ tr $ctx "ManageJobsRunButton" }}</button>
+            </form></td>
+          </tr>
+        {{ end }}
+      </table>
+    </div>
+  </article>
+{{ end }}

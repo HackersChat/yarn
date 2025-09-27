@@ -1,0 +1,48 @@
+{{ define "content" }}
+<article class="grid">
+  <div>
+    <hgroup>
+      <h2>{{ tr . "RegisterTitle" }}</h2>
+      <em>{{ tr . "RegisterSummary" (dict "InstanceName" $.InstanceName) }}</em>
+    </hgroup>
+    <form id="register" action="/register" method="POST" hx-on::before-request='u("#registerBtn").attr("aria-busy", true);' hx-on::after-on-load='u("#registerBtn").attr("aria-busy", "");'>
+      <fieldset>
+        <label for="username">
+          {{ tr . "RegisterFormUsername" }}
+          <input type="text" id="usernaem" name="username" placeholder="{{ tr . "RegisterFormUsername" }}" aria-label="{{ tr . "RegisterFormUsername" }}" autocomplete="nickname" autofocus required>
+        </label>
+        <label for="password">
+          {{ tr . "RegisterFormPassword" }}
+          <input type="password" id="password" name="password" placeholder="{{ tr . "RegisterFormPassword" }}" aria-label="{{ tr . "RegisterFormPassword" }}" autocomplete="current-password" required>
+        </label>
+        <label for="email">
+          {{ tr . "RegisterFormEmailAddress" }}
+          <span class="help" title="{{ tr . "RegisterFormEmailAddressHelp" }}"><i class="ti ti-help"></i></span>
+          <input type="email" id="email" name="email" placeholder="{{ tr . "RegisterFormEmailAddress" }}" aria-label="{{ tr . "RegisterFormEmailAddress" }}">
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="agree">
+          <input _="on change toggle @disabled on <button/> in the <form/>" type="checkbox" name="agree" role="switch" />
+          {{ (tr . "RegisterFormGuidelines") | html }}
+        </label>
+      </fieldset>
+      <label fir="pooh" class="pooh">
+        <input id="pooh" name="pooh" value="" />
+        {{ tr . "RegisterFormPooh" }}
+      </label>
+      <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+      <p class="notice">{{ $.Message }}</p>
+      <button id="registerBtn" _="init set @disabled to me" type="submit">{{ tr . "RegisterFormRegister" }}</button>
+      <p>{{ (tr . "RegisterFormLogin") | html }}</p>
+    </form>
+  </div>
+  <div>
+    <hgroup>
+      <h2>{{ tr . "RegisterHowToTitle" }}</h2>
+      <em>{{ tr . "RegisterHowToSummary" }}</em>
+    </hgroup>
+    <p>{{ (tr . "RegisterHowToContent" (dict "InstanceName" $.InstanceName)) | html }}</p>
+  </div>
+</article>
+{{ end }}

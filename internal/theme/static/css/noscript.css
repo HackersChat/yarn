@@ -1,0 +1,11 @@
+.embed-link-is-url {
+  display: inline;
+}
+
+.embed-video {
+  display: none;
+}
+
+.embed-audio {
+  display: none;
+}

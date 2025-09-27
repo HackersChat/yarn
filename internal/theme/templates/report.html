@@ -1,0 +1,30 @@
+{{ define "content" }}
+  <article>
+    <hgroup>
+      <h2>{{ tr . "AbuseTitle" }}</h2>
+      <p>{{ tr . "AbuseMessage" | html }}</p>
+    </hgroup>
+    <form action="/report" method="POST">
+      <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+      <input type="hidden" name="nick" value="{{ .ReportNick }}">
+      <input type="hidden" name="url" value="{{ .ReportURL }}">
+      <input type="text" name="name" placeholder="{{ tr . "AbuseFullName" }}" aria-label="{{ tr . "AbuseFullName" }}" autofocus required>
+      <input type="email" name="email" placeholder="{{ tr . "AbuseEmailAddress" }}" aria-label="{{ tr . "AbuseEmailAddress" }}" required>
+      <p>{{ tr . "AbuseWhyMessage" | html }}</p>
+      <select name="category">
+        <option value="" selected>{{ tr . "AbuseSelectTitle" }}</option>
+        <option value="harassment">{{ tr . "AbuseSelectOptionHarassment" }}</option>
+        <option value="hate">{{ tr . "AbuseSelectOptionHate" }}</option>
+        <option value="doxxing">{{ tr . "AbuseSelectOptionDoxxing" }}</option>
+        <option value="threat">{{ tr . "AbuseSelectOptionThreat" }}</option>
+        <option value="illegal">{{ tr . "AbuseSelectOptionIllegal" }}</option>
+      </select>
+      <textarea name="message" placeholder="{{ tr . "AbuseMessageTitle" }}" aria-label="{{ tr . "AbuseMessageTitle" }}" rows="5" cols="50" required></textarea>
+      <p>{{ tr . "AbuseMessageExamples" }}</p>
+      <small>{{ tr . "AbuseMessageCaptcha" }}</small>
+      <img id="captcha" src="/_captcha" alt="captcha" height="50" width="150" />
+      <input type="text" name="captchaInput" class="captchaInput" placeholder="{{ tr . "AbuseMessageCaptcha" }}" aria-label="{{ tr . "AbuseMessageCaptcha" }}" required>
+      <button type="submit">{{ tr . "AbuseSubmitButton" }}</button>
+    </form>
+  </article>
+{{ end }}

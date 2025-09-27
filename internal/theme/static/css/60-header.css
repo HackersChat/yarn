@@ -1,0 +1,192 @@
+/* === Header == */
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+/* Adapted from https://codepen.io/mutedblues/pen/MmPNPG */
+
+/* "Hide" checkbox -- moves it off screen*/
+#mobileToggle {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+}
+
+/* Hide hamburger for bigger screens */
+.menuIcon {
+  visibility: hidden;
+  display: none;
+}
+
+#podMenu {
+  margin: 0.5rem 0;
+}
+
+#podNavigation {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+#podNavigation div {
+  margin: 0.5rem 0.25rem;
+}
+
+#podNavigation.mobNoAuth {
+  grid-template-columns: 1fr 1fr;
+  justify-content: end;
+}
+
+alert {
+  /*  grid-area: alert;*/
+  /*  display: flex;*/
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  /*  border-radius: var(--border-radius);*/
+}
+
+alert a {
+  color: white;
+  text-decoration: underline;
+}
+
+alert.float {
+  top: 0;
+  left: 0;
+  /*  position: fixed;*/
+  position: sticky;
+  z-index: 9999;
+}
+
+
+alert.safe {
+  background-color: #4f8811;
+}
+
+alert.warn {
+  background-color: #ff5500;
+}
+
+alert.panic {
+  background-color: #ee1515;
+}
+
+alert.update {
+  background-color: #2986cc;
+}
+
+/* Set width for mobile/smaller screen size. */
+/* I set it big here so I don't have to shrink the screen so much */
+/* for testing purposes */
+@media screen and (max-width: 720px) {
+
+  header {
+    display: grid;
+    grid-template-areas:
+      "alert     alert     alert"
+      "title   title   hamburger"
+      "nav     nav     nav";
+    /*   grid-template-columns: 2fr 1fr;*/
+  }
+
+  h1,
+  #podLogo {
+    grid-area: title;
+  }
+
+  #podMenu {
+    border-bottom: thin solid var(--border);
+  }
+
+  #podNavigation {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mobileToggle {
+    display: none;
+  }
+
+  .menuIcon {
+    grid-area: hamburger;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 30px 20px 30px 0;
+    position: relative;
+    user-select: none;
+    visibility: visible;
+  }
+
+  .navIcon {
+    background: var(--accent);
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+  }
+
+  .navIcon:before {
+    top: 5px;
+  }
+
+  .navIcon:after {
+    top: -5px;
+  }
+
+  .navIcon:before,
+  .navIcon:after {
+    background: var(--accent);
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    transition: all .2s ease-out;
+  }
+
+  #podMenu {
+    grid-area: nav;
+    max-width: unset;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #podMenu div {
+    text-align: center;
+  }
+
+  .mobileToggle:checked~#podMenu {
+    max-height: 240px;
+  }
+
+  .mobileToggle:checked~.menuIcon .navIcon {
+    background: transparent;
+  }
+
+  .mobileToggle:checked~.menuIcon .navIcon:before {
+    transform: rotate(-45deg);
+  }
+
+  .mobileToggle:checked~.menuIcon .navIcon:after {
+    transform: rotate(45deg);
+  }
+
+  .mobileToggle:checked~.menuIcon .navIcon:before,
+  .mobileToggle:checked~.menuIcon .navIcon:after {
+    top: 0;
+  }
+}

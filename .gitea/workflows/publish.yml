@@ -1,0 +1,61 @@
+---
+
+name: 🚀 Publish
+
+on:
+  push:
+    branches: [main]
+
+env:
+  REGISTRY: r.mills.io
+  IMAGE: prologic/yarnd
+  TAG: latest
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Setup Docker Buildx
+      uses: actions/setup-buildx@v2
+    - name: Login to Registry
+      uses: actions/docker-login@v2
+      with:
+        registry: ${{ env.REGISTRY }}
+        username: ${{ secrets.REGISTRY_USER }}
+        password: ${{ secrets.REGISTRY_PASS }}
+    - name: Build Info
+      id: build-info
+      run: |
+        {
+          echo "VERSION=$(git describe --abbrev=0)"
+          echo "COMMIT=$(git rev-parse --short HEAD)"
+          echo "BUILD=$(git show -s --pretty=format:%cI)"
+        } >> "$GITHUB_OUTPUT"
+    - name: Build Image
+      uses: actions/docker-build-push@v6
+      with:
+        context: .
+        load: true
+        tags: ${{ env.REGISTRY}}/${{ env.IMAGE }}:${{ env.TAG }}
+        build-args: |
+          VERSION=${{ steps.build-info.outputs.VERSION }}
+          COMMIT=${{ steps.build-info.outputs.COMMIT }}
+          BUILD=${{ steps.build-info.outputs.BUILD }}
+    - name: Test Image
+      run: |
+        docker run --rm ${{ env.REGISTRY}}/${{ env.IMAGE }}:${{ env.TAG }} yarnd --version
+    - name: Publish Image
+      if: ${{ github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' }}
+      uses: actions/docker-build-push@v6
+      with:
+        context: .
+        push: true
+        tags: ${{ env.REGISTRY}}/${{ env.IMAGE }}:${{ env.TAG }}
+        build-args: |
+          VERSION=${{ steps.build-info.outputs.VERSION }}
+          COMMIT=${{ steps.build-info.outputs.COMMIT }}
+          BUILD=${{ steps.build-info.outputs.BUILD }}

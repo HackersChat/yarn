@@ -1,0 +1,12 @@
+{{ define "content" }}
+{{ if .IsHTMX }}
+{{ if .Error }}{{ tr . "ErrorTitle" }}{{ else }}{{ tr . "SuccessTitle" }}{{ end }}: {{ .Message }}
+{{ else }}
+<article class="grid">
+  <hgroup>
+    <h2>{{ if .Error }}{{ tr . "ErrorTitle" }}{{ else }}{{ tr . "SuccessTitle" }}{{ end }}</h2>
+    <em>{{ .Message }}</em>
+  </hgroup>
+</article>
+{{ end }}
+{{ end }}

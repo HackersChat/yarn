@@ -1,0 +1,10 @@
+{{ define "content" }}
+  <article class="container-fluid search-header">
+    <hgroup>
+      <h2>{{ tr . "SearchTitle" (dict "InstanceName" $.InstanceName) }}</h2>
+      <em>{{ tr . "SearchSummary" (dict "SearchQuery" .SearchQuery) }}</em>
+    </hgroup>
+  </article>
+  {{ template "sort" (dict "SearchQuery" $.SearchQuery "Pager" $.Pager) }}
+  {{ template "feed" (dict "Authenticated" $.Authenticated "User" $.User "Profile" $.Profile "LastTwt" $.LastTwt "Pager" $.Pager "Twts" $.Twts "Ctx" . "view" "search") }}
+{{ end }}

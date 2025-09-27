@@ -1,0 +1,164 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en" {{ with .Theme }}data-theme="{{ . }}" {{ end }}>
+
+<head>
+  {{ if $.Debug }}
+  <link href="/css/00-pico-tech-debt.css" rel="stylesheet" />
+  <link href="/css/01-simple.css" rel="stylesheet" />
+  <link href="/css/02-tabler-icons.css" rel="stylesheet" />
+  <link href="/css/03-colours.css" rel="stylesheet" />
+  <link href="/css/04-tippy.css" rel="stylesheet" />
+  <link href="/css/05-aria-busy.css" rel="stylesheet" />
+  <link href="/css/06-loading-bar.css" rel="stylesheet" />
+  <link href="/css/98-simple-override.css" rel="stylesheet" />
+  <link href="/css/60-header.css" rel="stylesheet" />
+  <link href="/css/70-tabs.css" rel="stylesheet" />
+  <link href="/css/99-yarn.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/img/favicon.png" />
+  {{ else }}
+  <link href="/css/{{ .Commit }}/yarn.min.css" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/img/{{ .Commit }}/favicon.png" />
+  {{ end }}
+
+  <noscript>
+    {{ if $.Debug }}
+    <link href="/css/noscript.css" rel="stylesheet" />
+    {{ else }}
+    <link href="/css/{{ .Commit }}/noscript.min.css" rel="stylesheet" />
+    {{ end }}
+  </noscript>
+
+  <!-- IndieAuth support-->
+  <link rel="authorization_endpoint" href="/indieauth/auth" />
+  <link rel="me" href="/" />
+
+  <!-- WebMentions support-->
+  <link rel="webmention" href="/webmention" />
+
+  {{ range .Alternatives }}
+  <link rel="alternate" type="{{ .Type }}" title="{{ .Title }}" href="{{ .URL }}" />
+  {{ end }}
+
+  {{ range .Links }}
+  <link href="{{ .Href }}" rel="{{ .Rel }}" />
+  {{ end }}
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>{{ .InstanceName }} {{ .Title }}</title>
+  {{ with .Meta.Title }}
+  <meta name="title" content="{{ . }}">{{ end }}
+  {{ with .Meta.Author }}
+  <meta name="author" content="{{ . }}">{{ end }}
+  {{ with .Meta.Keywords }}
+  <meta name="keywords" content="{{ . }}">{{ end }}
+  {{ with .Meta.Description }}
+  <meta name="description" content="{{ . }}">{{ end }}
+
+  <!-- OpenGraph Meta Tags -->
+  {{ with .Meta.Title }}
+  <meta property="og:title" content="{{ . }}">{{ end  }}
+  {{ with .Meta.Description }}
+  <meta property="og:description" content="{{ . }}">{{ end  }}
+  {{ with .Meta.UpdatedAt }}
+  <meta property="og:updated_time" content="{{ . }}" />{{ end  }}
+  {{ with .Meta.Image }}
+  <meta property="og:image" content="{{ . }}">{{ end  }}
+  {{ with .Meta.URL }}
+  <meta property="og:url" content="{{ . }}">{{ end  }}
+  <meta property="og:site_name" content="{{ .InstanceName }}">
+
+  <!-- Twitter Summary Card Meta Tags -->
+  <meta name="twitter:card" content="summary" />
+  {{ with .Meta.Author }}
+  <meta name="twitter:site" content="{{ . }}" />{{ end }}
+  {{ with .Meta.Title }}
+  <meta name="twitter:title" content="{{ . }}" />{{ end }}
+  {{ with .Meta.Description }}
+  <meta name="twitter:description" content="{{ . }}" />{{ end }}
+  {{ with .Meta.Image }}
+  <meta name="twitter:image" content="{{ . }}" />{{ end }}
+
+  <!-- Custom Pod CSS if provided -->
+  {{ with $.CSS }}
+  <style>
+    {{ . }}
+  </style>
+  {{ end }}
+</head>
+
+<body class="preload" hx-boost="true" hx-target="#content" hx-push-url="true" hx-swap="innerHTML transition:true" hx-headers='{"X-CSRF-Token": "{{ $.CSRFToken }}"}' hx-indicator=".loading-bar" hx-on::after-on-load='closeMobileToggle();'>
+
+  {{ if and (or (.Authenticated) ($.AlertGuest)) (gt (len $.AlertMessage) 0) }}
+  <alert class="{{ $.AlertType }} {{ if $.AlertFloat }}float{{ end }}">
+    <div>{{ $.AlertMessage | abbrev 150 | html }}</div>
+  </alert>
+  {{ end }}
+
+  <header class="container">
+
+    <div id="podLogo" {{ if $.AlertFloat }}class="float" {{ end }}>
+      <a href="/">{{ $.Logo }}</a>
+    </div>
+
+    <input id="mobileToggle" class="mobileToggle" type="checkbox" />
+    <label class="menuIcon" for="mobileToggle"><span class="navIcon" /></label>
+
+    <div id="podMenu">
+      {{ template "navbar" . }}
+    </div>
+
+  </header>
+
+  <div class="loading-bar"></div>
+  <main id="content" class="container{{ if $.AlertFloat }} float{{ end }}">
+    {{ template "content" . }}
+  </main>
+
+  <footer class="container">
+    <div class="footer-menu">
+      <a href="/about" class="menu-item">{{ tr . "MenuAbout" }}</a>
+      <a href="/privacy" class="menu-item">{{ tr . "MenuPrivacy" }}</a>
+      <a href="/abuse" class="menu-item">{{ tr . "MenuAbuse" }}</a>
+      <a href="/help" class="menu-item">{{ tr . "MenuHelp" }}</a>
+      {{ if .SupportDisabled }}
+        <s><a href="/support" class="menu-item">{{ tr . "MenuSupport" }}</a></s>
+      {{ else }}
+        <a href="/support" class="menu-item">{{ tr . "MenuSupport" }}</a>
+      {{ end }}
+    </div>
+    <div class="footer-copyright">
+      {{ tr . "FooterRunning" | html }}
+      <a id="v-info" href="/info" data-commit="{{ .SoftwareVersion.Commit }}">{{ .SoftwareVersion.Version }}</a> &mdash;&nbsp;
+      {{ tr . "FooterPod" | html }}
+    </div>
+  </footer>
+  {{ if $.Debug }}
+  <script type="application/javascript" src="/js/01-umbrella.js"></script>
+  <script type="application/javascript" src="/js/02-polyfill.js"></script>
+  <script type="application/javascript" src="/js/03-twix.js"></script>
+  <script type="application/javascript" src="/js/04-popper.js"></script>
+  <script type="application/javascript" src="/js/05-tippy.js"></script>
+  <script type="application/javascript" src="/js/06-htmx.js"></script>
+  <script type="application/javascript" src="/js/07-hyperscript.js"></script>
+  <script type="application/javascript" src="/js/98-modal.js"></script>
+  <script type="application/javascript" src="/js/99-yarn.js"></script>
+  <script type="application/javascript" src="/js/ie11CustomProperties.min.js"></script>
+  {{ else }}
+  <script type="application/javascript" src="/js/{{ .Commit }}/yarn.min.js"></script>
+  {{ end }}
+
+  <!-- Custom Pod JS if provided -->
+  {{ with $.JS }}
+  <script type="application/javascript">
+    {{ . }}
+  </script>
+  {{ end }}
+
+  <prefs id="prefs" _="init set <html/>'s @data-theme to my @data-theme" data-theme="{{ $.Theme }}" data-striptrack="{{ $.User.StripTrackingParam }}" data-readmore="{{ $.User.VisibilityReadmore }}" data-openlink="{{ $.User.OpenLinksInPreference }}"></prefs>
+</body>
+
+</html>
+{{ end }}

@@ -1,0 +1,3 @@
+[ManagePeersLastSeenHelp]
+hash = "sha1-3ad4def14803453488ab575243f72114b37384c2"
+other = "When this pod saw the peering pod the last time (e.g. when the peer requested a feed on this pod or this pod fetched a feed on the peer)"

@@ -1,0 +1,22 @@
+{{ define "content" }}
+  <article>
+    <hgroup>
+      <h2>{{ tr . "LoginEmailTitle" }}</h2>
+      <p>{{ tr . "LoginEmailSummary" (dict "InstanceName" $.InstanceName) }}</p>
+    </hgroup>
+    <form action="/login/email" method="POST">
+      <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+      <input type="text" name="username" placeholder="{{ tr . "LoginFormUsername" }}" aria-label="Username" autocomplete="nickname" autofocus required>
+      <input type="email" name="email" placeholder="{{ tr . "LoginFormEmailAddress" }}" aria-label="Email" autocomplete="email" required>
+      <button type="submit">{{ tr . "LoginFormEmailLogin" }}</button>
+      <p>
+      {{ tr . "LoginNoAccountTitle" }}
+        {{ if not .RegisterDisabled }}
+          <a href="/register">{{ tr . "RegisterLinkTitle" }}</a>
+          {{ tr . "Instead" }}
+        {{ end }}
+      </p>
+      <p><a href="/login">{{ tr . "LoginViaUsernamePassword" }}</a></p>
+    </form>
+  </article>
+{{ end }}

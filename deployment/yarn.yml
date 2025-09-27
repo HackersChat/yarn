@@ -1,0 +1,48 @@
+---
+version: “3.8”
+
+services:
+  yarn:
+    image: prologic/yarnd:latest
+    volumes:
+      - yarn:/data
+    networks:
+      - traefik
+    environment:
+      - BASE_URL=https://mypoddomain.com
+      - OPEN_PROFILES=true
+      - OPEN_REGISTRATIONS=true
+      - DISABLE_GZIP=true
+      - ADMIN_USER=youradminusername
+      - ADMIN_NAME=useradminname
+      - ADMIN_EMAIL=youradmin@email.com
+      - SMTP_HOST=xxxx (optional)
+      - SMTP_USER=xxxx (optional)
+      - SMTP_FROM=xxxx (optional)
+      - SMTP_PASS=xxxx (optional)
+      - API_SIGNING_KEY=(generate a string via `openssl -base64 64`)
+      - COOKIE_SECRET=(generate a string via `openssl -base64 64`)
+      - MAGICLINK_SECRET=(generate a string via `openssl -base64 64`)
+      - THEME=/theme
+      - PUID=1000
+      - PGID=1000
+    deploy:
+      mode: replicated
+      replicas: 1
+      labels:
+        - “traefik.enable=true”
+        - “traefik.http.routers.yarn_yarn.entrypoints=https”
+        - “traefik.docker.network=traefik”
+        - “traefik.http.services.yarn_yarn.loadbalancer.server.port=8000”
+        - “traefik.http.routers.yarn_yarn.rule=Host(`mypoddomain.com`)”
+      restart_policy:
+        condition: any
+
+networks:
+  traefik:
+  external: true
+
+volumes:
+  yarn:
+  driver: local
+

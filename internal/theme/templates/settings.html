@@ -1,0 +1,312 @@
+{{ define "content" }}
+
+<form action="/settings" enctype="multipart/form-data" method="POST" id="updateSettings">
+  <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}" form="updateSettings">
+</form>
+
+
+<div class="settings tabs">
+
+  <!-- Profile and privacy (Tab #1) -->
+  <input type="radio" name="tabs" id="tab1" checked="checked">
+  <label for="tab1">Profile and privacy</label>
+  <div class="tab">
+    <h2>Profile and privacy</h2>
+    <em>Change how your profile looks to other and what information is open to the public. </em>
+    <!-- <a href="/user/{{ .User.Username }}">Your public profile <i class="ti ti-user-circle"></i></a> -->
+
+    <article class="profile-header">
+
+      <div class="profile-card">
+        <a id="profile-avatar" href="/user/{{ $.User.Username }}" class="u-url">
+          <img class="avatar u-photo" src="/user/{{ $.User.Username }}/avatar" alt="" loading=lazy />
+        </a>
+        <div>
+          <hgroup>
+            <h3>{{ .User.Username }}</h3>
+            <em>{{ .User.URL | hostnameFromURL }}</em>
+          </hgroup>
+          <p>{{ if gt (len .User.Tagline) 0 }}{{ .User.Tagline }}{{ else }}<em>{{ tr . "SettingsInfoMissingTagline" }}</em>{{ end }}</p>
+
+          <ul id="profile-links">
+            {{ template "profileLinks" (dict "Authenticated" .Authenticated "CSRFToken" .CSRFToken "Profile" .Profile "User" .User "Ctx" .) }}
+          </ul>
+        </div>
+      </div>
+
+      <div id="profile-info">
+        <hgroup>
+          <h3>{{ tr . "SettingsInfoUserInfo" }}</h3>
+          <!-- <h2><hr></h2> -->
+        </hgroup>
+        <ul>
+          <li id="following">
+            <a href="/user/{{ $.Profile.Nick }}/following"><b>{{ $.Profile.NFollowing }}</b> {{ tr . "ProfileFollowingLinkTitle" }}</a>
+          </li>
+          <li id="followers">
+            <a href="/followers"><b>{{ $.Profile.NFollowers }}</b> {{ tr . "ProfileFollowersLinkTitle" }}</a>
+          </li>
+          <li id="muted">
+            <a href="/muted"><b>{{ $.User.Muted | len }}</b> {{ tr . "MutedLinkTitle" }}</a>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <article>
+      <form action="/settings/addlink" enctype="multipart/form-data" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+        <div>
+          <hgroup>
+            <h2>{{ tr . "CustomLinkTitle" }}</h2>
+            <em>{{ tr . "CustomLinkSummary" }}</em>
+          </hgroup>
+        </div>
+        <div class="grid">
+          <div>
+            <input id="newLinkTitle" maxlength=32 type="text" name="linkTitle" placeholder="{{ tr . "CustomLinkAddTitle" }}" aria-label="{{ tr . "CustomLinkAddTitle" }}" />
+          </div>
+          <div>
+            <input id="newLinkURL" type="text" name="linkURL" placeholder="{{ tr . "CustomLinkAddURL" }}" aria-label="{{ tr . "CustomLinkAddURL" }}" />
+          </div>
+        </div>
+        <button type="submit">{{ tr . "CustomLinkAddSubmit" }}</button>
+      </form>
+    </article>
+
+    <article class="grid">
+      <div>
+
+        <div>
+          <label for="avatar">
+            {{ tr . "SettingsFormChangeAvatarTitle" }}
+            <input id="avatar_upload" type="file" accept="image/png, image/jpeg" name="avatar_file" aria-label="Upload Avatar" form="updateSettings" />
+          </label>
+        </div>
+        <div class="grid">
+          <div>
+            <label for="tagline">
+              {{ tr . "SettingsFormChangeTaglineTitle" }}
+              <textarea id="tagline" rows="3" name="tagline" placeholder="{{ tr . "SettingsFormChangeTagline" }}" aria-label="Tagline" form="updateSettings">{{ .User.Tagline | replace "\u2028" "\r\n" }}</textarea>
+            </label>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="grid">
+          <div>
+            <fieldset>
+              <legend>{{ tr . "SettingsFormPrivacySettingsTitle" }}</legend>
+              <label for="isBookmarksPubliclyVisible">
+                <input id="isBookmarksPubliclyVisible" type="checkbox" name="isBookmarksPubliclyVisible" aria-label="{{ tr . "SettingsFormPrivacySettingsShowBookmarks" }}" role="switch" {{ if .User.IsBookmarksPubliclyVisible }}checked{{ end }} form="updateSettings">
+                {{ tr . "SettingsFormPrivacySettingsShowBookmarks" }}
+              </label>
+              <label for="isFollowingPubliclyVisible">
+                <input id="isFollowingPubliclyVisible" type="checkbox" name="isFollowingPubliclyVisible" aria-label="{{ tr . "SettingsFormPrivacySettingsShowFollowings" }}" role="switch" {{ if .User.IsFollowingPubliclyVisible }}checked{{ end }} form="updateSettings">
+                {{ tr . "SettingsFormPrivacySettingsShowFollowings" }}
+              </label>
+            </fieldset>
+          </div>
+        </div>
+
+        <button type="submit" class="primary" form="updateSettings">{{ tr . "SettingsFormUpdate" }}</button>
+
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Look and feel (Tab #2) -->
+
+  <input type="radio" name="tabs" id="tab2">
+  <label for="tab2">Look and feel</label>
+  <div class="tab">
+    <h2>Look and feel</h2>
+    <em>Change how your account looks and feels when your are logged in </em>
+
+    <article class="grid">
+      <div>
+
+        <div class="grid">
+
+          <fieldset id="startpage">
+            <legend>{{ tr . "SettingsFormStartPageTitle" }} <span class="help" title="{{ tr . "SettingsFormStartPageTitleHelp" }}"><i class="ti ti-help"></i></legend>
+            <select name="startpage" form="updateSettings">
+              <option id="sp-timeline" value="#origin" {{ if eq .User.StartPage "#origin" }}selected{{ end }}>{{ tr . "NavOrigin" }}</option>
+              <option id="sp-timeline" value="/" {{ if eq .User.StartPage "/" }}selected{{ end }}>{{ tr . "NavTimeline" }}</option>
+              <option id="sp-discover" value="/discover" {{ if eq .User.StartPage "/discover" }}selected{{ end }}>{{ tr . "NavDiscover" }}</option>
+              <option id="sp-mentions" value="/mentions" {{ if eq .User.StartPage "/mentions" }}selected{{ end }}>{{ tr . "NavMentions" }}</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>{{ tr . "SettingsFormThemeTitle" }}</legend>
+            <select _="on change set <html/>'s @data-theme to the value of me" name="theme" form="updateSettings">
+              <option value="" {{ if eq .User.Theme "auto" }}selected{{ end }}>{{ tr . "ThemeAuto" }}</option>
+              <option value="amoled" {{ if eq .User.Theme "amoled" }}selected{{ end }}>{{ tr . "ThemeAmoled" }}</option>
+              <option value="dark-classic" {{ if eq .User.Theme "dark-classic" }}selected{{ end }}>{{ tr . "ThemeDarkClassic" }}</option>
+              <option value="light-classic" {{ if eq .User.Theme "light-classic" }}selected{{ end }}>{{ tr . "ThemeLightClassic" }}</option>
+              <option value="dark" {{ if eq .User.Theme "dark" }}selected{{ end }}>{{ tr . "ThemeDark" }}</option>
+              <option value="light" {{ if eq .User.Theme "light" }}selected{{ end }}>{{ tr . "ThemeLight" }}</option>
+            </select>
+          </fieldset>
+        </div>
+
+        <div class="grid">
+          <fieldset>
+            <legend>{{ tr . "ManagePodMediaSettings" }}</legend>
+            <label for="displayMedia">
+              <input id="displayMedia" type="checkbox" name="displayMedia" aria-label="{{ tr . "ManagePodMediaSettingsDisplay" }}" role="switch" {{ if .User.DisplayMedia }}checked{{ end }} form="updateSettings" />
+              {{ tr . "ManagePodMediaSettingsDisplay" }}
+            </label>
+            <label for="originalMedia">
+              <input id="originalMedia" type="checkbox" name="originalMedia" aria-label="{{ tr . "ManagePodMediaSettingsOriginal" }}" role="switch" {{ if .User.OriginalMedia }}checked{{ end }} form="updateSettings" />
+              {{ tr . "ManagePodMediaSettingsOriginal" }}
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>{{ tr . "SettingsFormDisplayImagesPreferenceTitle" }}</legend>
+            <label for="inline">
+              <input id="inline" type="radio" name="displayImagesPreference" value="inline" {{ if eq $.User.DisplayImagesPreference "inline" }}checked{{ end }} form="updateSettings">
+              {{ tr . "SettingsFormDisplayImagesPreferenceInline" }}
+            </label>
+            <label for="lightbox">
+              <input id="lightbox" type="radio" name="displayImagesPreference" value="lightbox" {{ if eq $.User.DisplayImagesPreference "lightbox" }}checked{{ end }} form="updateSettings">
+              {{ tr . "SettingsFormDisplayImagesPreferenceLightbox" }}
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="grid">
+          <fieldset>
+            <legend>{{ tr . "SettingsFormOpenLinksInPreferenceTitle" }}</legend>
+            <label for="newwindow">
+              <input id="newwindow" type="radio" name="openLinksInPreference" value="newwindow" {{ if eq $.User.OpenLinksInPreference "newwindow" }}checked{{ end }} form="updateSettings">
+              {{ tr . "SettingsFormOpenLinksInPreferenceNewWindow" }}
+            </label>
+            <label for="samewindow">
+              <input id="samewindow" type="radio" name="openLinksInPreference" value="samewindow" {{ if eq $.User.OpenLinksInPreference "samewindow" }}checked{{ end }} form="updateSettings">
+              {{ tr . "SettingsFormOpenLinksInPreferenceSameWindow" }}
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>{{ tr . "SettingsFormTimelinePreferenceTitle" }}</legend>
+            <label for="timelineList">
+              <input id="timelineList" type="radio" name="displayTimelinePreference" value="list" {{ if eq $.User.DisplayTimelinePreference "list" }}checked{{ end }} form="updateSettings">
+              {{ tr . "SettingsFormTimelinePreferenceList" }}
+            </label>
+            <label for="timelineFlat">
+              <input id="timelineFlat" type="radio" name="displayTimelinePreference" value="flat" {{ if eq $.User.DisplayTimelinePreference "flat" }}checked{{ end }} form="updateSettings">
+              {{ tr . "SettingsFormTimelinePreferenceFlat" }}
+            </label>
+          </fieldset>
+        </div>
+
+        <div class="grid">
+          <fieldset>
+            <legend>{{ tr . "SettingsTwtTitle" }}</legend>
+            <label for="visReadmore">
+              <input id="visReadmore" type="checkbox" name="visibilityReadmore" aria-label="{{ tr . "SettingsTwtReadmore" }}" role="switch" {{ if $.User.VisibilityReadmore }}checked{{ end }} form="updateSettings">
+              {{ tr . "SettingsTwtReadmore" }} <span class="help" title="{{ tr . "SettingsTwtReadmoreHelp" }}"><i class="ti ti-help"></i></span>
+            </label>
+            <label for="pvcStripTrack">
+              <input id="pvcStripTrack" type="checkbox" name="stripTrackingParam" aria-label="{{ tr . "SettingsTwtStripTrackingParam" }}" role="switch" {{ if .User.StripTrackingParam }}checked{{ end }} form="updateSettings">
+              {{ tr . "SettingsTwtStripTrackingParam" }} <span class="help" title="{{ tr . "SettingsTwtStripTrackingParamHelp" }}"><i class="ti ti-help"></i></span>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>{{ tr . "SettingsFormTimePreferenceTitle" }}</legend>
+            <label for="12h">
+              <input id="12h" type="radio" name="displayTimePreference" value="12h" {{ if eq $.User.DisplayTimePreference "12h" }}checked{{ end }} form="updateSettings"> 12hr
+            </label>
+            <label for="24h">
+              <input id="24h" type="radio" name="displayTimePreference" value="24h" {{ if eq $.User.DisplayTimePreference "24h" }}checked{{ end }} form="updateSettings"> 24hr
+            </label>
+
+            <label for="displayDatesInTimezone">
+              <strong>{{ tr . "SettingsFormTimezoneTitle" }}</strong>
+              <select id="displayDatesInTimezone" name="displayDatesInTimezone" form="updateSettings">
+                {{ range .Timezones }}
+                <option value="{{ .TzName }}" {{ if eq $.User.DisplayDatesInTimezone .TzName }}selected{{ end }}>{{ .NameWithOffset }}</option>
+                {{ end }}
+              </select>
+            </label>
+          </fieldset>
+
+        </div>
+
+        <button type="submit" class="primary" form="updateSettings">{{ tr . "SettingsFormUpdate" }}</button>
+
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Account settings (Tab #3) -->
+  <input type="radio" name="tabs" id="tab3">
+  <label for="tab3">Account settings</label>
+  <div class="tab">
+    <h2>Account settings</h2>
+    <em>Change your e-mail and password</em>
+
+    <article class="grid">
+      <div>
+
+        <div class="grid">
+          <div>
+            <label for="password">
+              {{ tr . "SettingsFormChangePasswordTitle" }}
+              <input id="password" type="password" name="password" placeholder="{{ tr . "SettingsFormChangePassword" }}" aria-label="Password" autocomplete="current-password" form="updateSettings">
+            </label>
+          </div>
+          <div>
+            <label for="email">
+              {{ tr . "SettingsFormChangeEmailTitle" }} <span class="help" title="{{ (tr . "SettingsFormChangeEmailSummary") | html }}"><i class="ti ti-help"></i></span>
+              <input id="email" type="email" name="email" placeholder="{{ tr . "SettingsFormChangeEmail" }}" aria-label="Email" form="updateSettings">
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="primary" form="updateSettings">{{ tr . "SettingsFormUpdate" }}</button>
+
+      </div>
+    </article>
+
+    <article>
+      <div>
+        <hgroup>
+          <h2>{{ tr . "SettingsToolsTitle" }}</h2>
+          <em>{{ (tr . "SettingsToolsSummary" (dict "InstanceName" .InstanceName)) | html }}</em>
+        </hgroup>
+      </div>
+      <div>
+        <a role="button" href="javascript:{{ .Bookmarklet }}">{{ tr . "SettingsToolsShareLinkTitle" (dict "InstanceName" .InstanceName) }}</a>
+      </div>
+    </article>
+
+    <article>
+      <div>
+        <hgroup>
+          <h2>{{ tr . "SettingsDeleteAccountTitle" }}</h2>
+          <em style="color: red">{{ (tr . "SettingsDeleteAccountSummary") | html }}</em>
+        </hgroup>
+      </div>
+      <div>
+        <form action="/delete" method="POST" id="deleteAccount">
+          <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}" form="deleteAccount">
+          <button type="submit" class="contrast" onclick="return confirm('{{ tr . "DeleteAccountFormConfirm" }}')" form="deleteAccount">{{ tr . "SettingsDeleteAccountFormDelete" }}</button>
+        </form>
+      </div>
+    </article>
+
+  </div>
+
+  {{ if .IsAdmin }}
+  <!-- Poderator (Tab #4 -- fake) -->
+  <a href="/manage/pod" style="order: 1;"><i class="ti ti-device-analytics"></i> Poderator Settings</a>
+  {{ end }}
+
+</div>
+{{ end }}

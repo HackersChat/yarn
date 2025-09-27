@@ -1,0 +1,42 @@
+{{ define "content" }}
+  <article>
+    <hgroup>
+      <h2>{{ tr . "ManageUsersLinkTitle" }}</h2>
+      <em>{{ tr . "ManageUsersSummary" }}</em>
+    </hgroup>
+    <div>
+      <h4>{{ tr . "ManageUsersUserAdd" }}</h4>
+      <form action="/manage/adduser" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+        <input type="text" name="username" placeholder="{{ tr . "ManageUsersUserAddUsername" }}" aria-label="{{ tr . "ManageUsersUserAddUsername" }}" autocomplete="nickname" required>
+        <input type="text" name="email" placeholder="{{ tr . "ManageUsersUserAddEmail" }}" aria-label="{{ tr . "ManageUsersUserAddEmail" }}" autocomplete="email" required>
+        <p>{{ tr . "ManageUsersUserAddHelp" }}</p>
+        <button type="submit">{{ tr . "ManageUsersUserAdd" }}</button>
+      </form>
+    </div>
+    <div>
+      <h4>{{ tr . "ManageUsersUserDelete" }}</h4>
+      <form action="/manage/deluser" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+        <input type="text" name="username" placeholder="{{ tr . "ManageUsersUserDeleteName" }}" />
+        <button type="submit" onclick="return confirm('{{ tr . "ManageUsersUserDeleteConfirm" }}')">{{ tr . "ManageUsersUserDelete" }}</button>
+      </form>
+    </div>
+    <div>
+      <h4>{{ tr . "ManageUsersFeedDelete" }}</h4>
+      <form action="/manage/delfeed" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+        <input type="text" name="name" placeholder="{{ tr . "ManageUsersFeedDeleteName" }}" />
+        <button type="submit" onclick="return confirm('{{ tr . "ManageUsersFeedDeleteConfirm" }}')">{{ tr . "ManageUsersFeedDelete" }}</button>
+      </form>
+    </div>
+    <div>
+      <h4>{{ tr . "ManageUsersUserReset" }}</h4>
+      <form action="/manage/rstuser" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+        <input type="text" name="username" placeholder="{{ tr . "ManageUsersUserResetUsername" }}" />
+        <button type="submit" onclick="return confirm('{{ tr . "ManageUsersUserResetConfirm" }}')">{{ tr . "ManageUsersUserReset" }}</button>
+      </form>
+    </div>
+  </article>
+{{ end }}

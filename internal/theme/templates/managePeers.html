@@ -1,0 +1,47 @@
+{{ define "content" }}
+<article>
+  <hgroup>
+    <h2>{{ tr . "ManagePeersTitle" }}</h2>
+    <em>{{ tr . "ManagePeersSummary" (dict "Peers" $.Peers) }}</em>
+  </hgroup>
+  <div>
+    <p>{{ tr . "ManagePeersTrustedPeersHelp" }}</p>
+    <table>
+      <tr>
+        <th>{{ tr . "ManagePeersName" }}</th>
+        <th>{{ tr . "ManagePeersVersion" }}</th>
+        <th>{{ tr . "ManagePeersLastSeen" }}&nbsp;
+          <span class="help" title="{{ tr . "ManagePeersLastSeenHelp" }}">
+            <i class="ti ti-help"></i>
+          </span>
+        </th>
+        <th>{{ tr . "ManagePeersLastUpdated" }}&nbsp;
+          <span class="help" title="{{ tr . "ManagePeersLastUpdatedHelp" }}">
+            <i class="ti ti-help"></i>
+          </span>
+        </th>
+        <th>{{ tr . "ManagePeersActions" }}</th>
+      </tr>
+      {{ range $peer := $.Peers }}
+      <tr>
+        <td><a href="{{ $peer.URI }}" target="_blank" title="{{ $peer.Description }}">{{ $peer.Name }}</a></td>
+        <td><small>{{ $peer.SoftwareVersion }}</small></td>
+        <td><small title="{{ dateInZone "2006-01-02 15:04:05 Z07:00" $peer.LastSeen $.User.DisplayDatesInTimezone }}">{{ $peer.LastSeen | time }}</small></td>
+        <td><small title="{{ dateInZone "2006-01-02 15:04:05 Z07:00" $peer.LastUpdated $.User.DisplayDatesInTimezone }}">{{ $peer.LastUpdated | time }}</small></td>
+        <td>
+          <a href="/manage/delpeer?uri={{ $peer.URI }}" title="{{ tr $ "ManagePeersDeleteHelp" }}">{{ tr $ "ManagePeersDelete" }}</a>
+          <form action="/manage/trspeer?uri={{ $peer.URI }}&trusted={{ not $peer.Trusted }}" enctype="application/x-www-form-urlencoded" method="post">
+            <input type="hidden" name="csrf_token" value="{{ $.CSRFToken }}">
+            {{ if $peer.Trusted }}
+            <input type="submit" value="{{ tr $ "ManagePeersUntrustPeer" }}" title="{{ tr $ "ManagePeersUntrustPeerHelp" }}">
+            {{ else }}
+            <input type="submit" value="{{ tr $ "ManagePeersTrustPeer" }}" title="{{ tr $ "ManagePeersTrustPeerHelp" }}">
+            {{ end }}
+          </form>
+        </td>
+      </tr>
+      {{ end }}
+    </table>
+  </div>
+</article>
+{{ end }}

@@ -1,0 +1,55 @@
+{{ define "content" }}
+<article>
+  <hgroup>
+    <h2>{{ tr . "FollowingTitle" }}</h2>
+    <em>
+      {{ if $.User.Is .Profile.URI }}
+      {{ tr . "FollowingFollowingYou" }}
+      {{ else }}
+      {{ (tr . "FollowingFollowingUser" (dict "Username" .Profile.Nick)) | html }}
+      {{ end }}
+    </em>
+  </hgroup>
+  {{ if .Profile.Following }}
+  <ol>
+    {{ $ctx:=. }}
+    {{ range $f := .Profile.Following }}
+    <li>
+      {{ if isLocalURL $f.URI }}
+      <a href="{{ $f.URI | trimSuffix "/twtxt.txt" }}">
+        {{ else }}
+        <a href="/external?uri={{ $f.URI }}">
+          {{ end }}
+          {{ if $.User.Is $f.URI }}
+          {{ tr $ctx "MeLinkTitle" }}
+          {{ else }}
+          {{ $f.Nick }}
+          {{ end }}
+        </a>
+        {{ if $.Authenticated }}
+        <a hx-boost="false" class="unfollowBtn" href="/unfollow?nick={{ $f.Nick }}" hx-boot="false" hx-push-url="false" hx-post="/unfollow?nick={{ $f.Nick }}" hx-swap="delete swap:1s" hx-target="closest li">
+          <i class="ti ti-circle-minus"></i>
+          {{ tr $ctx "UnfollowLinkTitle" }}
+        </a>
+        {{ if $.User.Is $.Profile.URI }}
+        {{ with getCachedFeed $f.URI }}
+        (<i>{{ .Twts | len }} twts, Last fetched {{ .LastFetched | time }}, Availability: {{ round .Availability 2 }}%)</i>
+        {{ if .LastError }}<br />{{ .Errors }} errors, Last Error:
+        <pre>{{ .LastError }}</pre>{{ end }}
+        {{ end }}
+        {{ end }}
+        {{ end }}
+    </li>
+    {{ end }}
+  </ol>
+  {{ else }}
+  <p>
+    {{ if $.User.Is $.Profile.URI }}
+    {{ (tr . "FollowingNoFollowingSummary" (dict "InstanceName" .InstanceName)) | html }}
+    {{ else }}
+    <b>{{ .Profile.Nick }}</b> {{ tr . "FollowingNoFollowing" }}
+    {{ end }}
+  </p>
+  {{ end }}
+</article>
+{{ end }}

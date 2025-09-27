@@ -1,0 +1,16 @@
+[Unit]
+Description=YOUR_POD_NAME
+After=syslog.target
+After=network.target
+
+[Service]
+Type=simple
+User=YARND_USERID
+Group=YARND_USERGROUP
+EnvironmentFile=YARND_ENVIRONMENT_LOCATION/yarnd.env
+ExecStart=YARND_EXECUTABLE_LOCATION/yarnd -d YARND_DATA_LOCATION-s bitcask://YARND_DATA_LOCATION/yarn.db --admin-email "YOUR_ADMIN_EMAIL_ADDRESS" --admin-name "YOUR_ADMIN_NAME" --admin-user "YARND_ADMIN_USERID" --description "YOUR_POD_NAME" --lang "en" --name "YOUR_POD_NAME" -u "YOUR_POD_URL"
+
+TimeoutSec=300
+
+[Install]
+WantedBy=multi-user.target
